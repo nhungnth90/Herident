@@ -1,0 +1,45 @@
+/* ====================================
+   BOX-ADS
+   ==================================== */
+
+.box-ads {
+    padding: 24px 20px;
+    margin-top: 30px;
+    background: var(--gray-100, #f8f9fa);
+
+    .box-heading {
+        @include box-heading;
+    }
+
+    .wrap-heading {
+        .subcate {
+            background: var(--gray-100, #f8f9fa);
+
+            a {
+                font-size: 13px;
+                color: var(--gray-600, #6c757d);
+
+                &:hover {
+                    color: var(--primary, #D72027);
+                }
+            }
+        }
+    }
+
+    .box-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        @media (min-width: $lg) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .story__thumb {
+        width: 120px;
+        height: 80px;
+        float: left;
+        margin-right: 16px;
+    }
+}

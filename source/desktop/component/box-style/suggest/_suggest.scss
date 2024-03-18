@@ -1,0 +1,36 @@
+/* ====================================
+   SUGGEST
+   ==================================== */
+
+.suggest {
+    .box-heading {
+        @include box-heading;
+    }
+
+    .box-content {
+        display: grid;
+        gap: 24px var(--column-gap);
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (min-width: $lg) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .btn {
+            grid-column: 1/3;
+
+            @media (min-width: $lg) {
+                grid-column: 1/5;
+            }
+        }
+    }
+
+    .story__thumb {
+        height: 180px;
+        margin-bottom: 12px;
+    }
+
+    .story__heading {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,100 @@
+/* ====================================
+   POPULAR
+   ==================================== */
+
+.popular {
+    .box-heading {
+        @include box-heading;
+    }
+
+    .story {
+        &:not(:last-child) {
+            border-bottom: 1px solid $border-color;
+        }
+
+        &:nth-child(2) {
+            .story__heading a::before {
+                background-position: -100px 0;
+            }
+        }
+
+        &:nth-child(3) {
+            .story__heading a::before {
+                background-position: -200px 0;
+            }
+        }
+
+        &:nth-child(4) {
+            .story__heading a::before {
+                background-position: -300px 0;
+            }
+        }
+
+        &:nth-child(5) {
+            .story__heading a::before {
+                background-position: -400px 0;
+            }
+        }
+
+        &__thumb {
+            height: 200px;
+        }
+
+        &__heading {
+            font-size: 16px;
+            padding: 16px;
+
+            a {
+                position: relative;
+                padding-left: 50px;
+
+                &:before {
+                    content: "";
+                    width: 40px;
+                    height: 32px;
+                    background: url("../img/sprites.svg?v=1.4") 0 0 no-repeat;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        &.story--focus {
+            padding: 0;
+            border: 0 none;
+            position: relative;
+
+            .story__thumb {
+                a::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background: linear-gradient(to top, #000 -15%, rgba(255, 255, 255, 0) 70%);
+                }
+            }
+
+            .story__heading {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                a,
+                i {
+                    color: #fff;
+                }
+            }
+
+            .ic-emagazine,
+            .ic-infographic {
+                filter: brightness(10);
+            }
+        }
+    }
+}

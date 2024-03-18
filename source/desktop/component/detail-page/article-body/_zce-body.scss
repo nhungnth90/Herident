@@ -1,0 +1,754 @@
+// ----------------------------------
+// INFO : File này dùng chung cho đầu trong và ngoài
+// ----------------------------------
+// ----------------------------------
+// 7 dạng hiển thị : left, right, center, outset-left, outset-right, full-width, max-width
+// bỏ mixin w1300 nếu ảnh default = nội dung bài viết
+// ----------------------------------
+@mixin classOutsetLeftRightDetail() {
+    &.outset-left {
+        width: 50%;
+        margin-left: auto;
+        margin-right: 24px;
+    }
+
+    &.outset-right {
+        width: 50%;
+        margin-left: 24px;
+        margin-right: auto;
+    }
+}
+
+@mixin maxWidthFullWiwthDetail() {
+
+    &.full-width,
+    &.max-width {
+        width: 100%;
+    }
+}
+
+// style table in side blockquote, notebox
+@mixin table() {
+    table {
+
+        &.full-width,
+        &.max-width {
+            width: 100%;
+        }
+    }
+
+    @include tableNotBorder();
+}
+
+@mixin space() {
+    >* {
+        margin-bottom: $gutter-body !important;
+
+        &:last-child {
+            margin-top: 0;
+        }
+    }
+}
+
+@mixin tableNotBorder() {
+
+    td,
+    th {
+        padding: 0 !important;
+        border: none !important;
+        display: block;
+        align-items: center;
+    }
+}
+
+@mixin classLeftRight() {
+    &.align-left {
+        width: 50%;
+        float: left;
+        margin-right: 24px;
+    }
+
+    &.align-right {
+        width: 50%;
+        float: right;
+        margin-left: 24px;
+    }
+}
+
+@mixin maxWidth() {
+    &.max-width {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100vw - 17px);
+        max-width: 1300px;
+    }
+}
+
+@mixin alignLeftRight() {
+    &[align="center"] {
+        @include tableNotBorder();
+        text-align: left;
+        width: 100%;
+    }
+
+    &[align="left"] {
+        width: 50%;
+        float: left;
+        margin-right: 24px;
+        text-align: left;
+        @include tableNotBorder();
+    }
+
+    &[align="right"] {
+        width: 50%;
+        float: right;
+        margin-left: 24px;
+        text-align: left;
+        @include tableNotBorder();
+    }
+}
+
+@mixin w1300() {
+    &[align="center"] {
+        position: relative;
+        width: 1300px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin w100() {
+    &[align="center"] {
+        width: 100%;
+    }
+}
+
+// ----------------------------------
+// Format cho các thành phần cơ bản trong bài chi tiết
+// ----------------------------------
+.zce-content-body {
+    >* {
+        font-family: $font-family-base;
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 20px !important;
+    }
+
+    a {
+        color: var(--primary, #D72027);
+        display: initial;
+
+        &:hover {
+            text-decoration: underline;
+            opacity: 1 !important;
+        }
+    }
+
+    ul,
+    ol {
+        padding: 0;
+
+        li {
+            margin-bottom: 8px;
+        }
+    }
+
+    ul {
+        list-style: inherit;
+    }
+
+    ol {
+        list-style: auto;
+    }
+
+    >h1,
+    >h2,
+    >h3,
+    >h4,
+    >h5 {
+        font-family: $font-family-heading;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    table {
+
+        td,
+        th {
+            padding: 0;
+        }
+    }
+
+    table:not([class]) {
+        width: 100%;
+
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid #E9ECEF;
+        }
+    }
+
+    table[data-zce-type] {
+
+        tr[data-zce-type] td,
+        th {
+            display: table-cell;
+            padding: 10px !important;
+            border: 1px solid #eee !important;
+        }
+    }
+
+    [align=left],
+    [align=right],
+    [align=center] {
+
+        figcaption,
+        .caption {
+            padding: 10px 20px !important;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto !important;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    video {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    figcaption,
+    .caption {
+        font-size: 16px;
+        color: var(--gray-600, #6c757d);
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    figure,
+    table,
+    blockquote,
+    .notebox,
+    .poll-box {
+        @include classLeftRight();
+        @include alignLeftRight();
+    }
+
+    >figure,
+    >table {
+        @media (max-width: $md) {
+
+            &.full-width,
+            &.max-width {
+                max-width: 100vw;
+            }
+
+            &.picture,
+            &:not([class]):not([align]),
+            &[align="center"] {
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100vw !important;
+            }
+        }
+    }
+
+    blockquote,
+    .notebox {
+        @include space();
+        @include table();
+
+        table,
+        figure {
+            @include w100();
+        }
+    }
+
+    .live-zone,
+    .interview-zone {
+
+        table,
+        figure {
+            @include maxWidthFullWiwthDetail();
+            @include classOutsetLeftRightDetail();
+            @include w100();
+        }
+    }
+
+    .dropcap {
+        &::first-letter {
+            font-family: "Noto Serif", serif;
+            font-size: 250%;
+            line-height: 1.3;
+            font-weight: 700;
+            padding: 0 10px;
+            margin: 0 10px 10px 0;
+            background: var(--gray-100, #f8f9fa);
+        }
+    }
+
+    [align="left"],
+    [align="right"],
+    .outset-left,
+    .outset-right,
+    .align-left,
+    .align-right {
+        @media (max-width: 767px) {
+            width: 100% !important;
+        }
+    }
+
+    [class^=layout-image-] {
+        @media (max-width: $md) {
+            width: 100vw;
+            left: 50%;
+            position: relative;
+            transform: translateX(-50%);
+            grid-template-columns: none;
+
+            figcaption {
+                grid-column: inherit;
+            }
+        }
+    }
+
+    .layout-image-3 figure:first-child {
+        @media (max-width: $md) {
+            grid-column: inherit;
+        }
+    }
+}
+
+// for detail-page
+body:not(.longform-page):not(.emagazine-page):not(.lens-page) {
+    .zce-content-body {
+
+        figure,
+        table,
+        blockquote,
+        .notebox,
+        .poll-box {
+            @include classOutsetLeftRightDetail();
+        }
+
+        figure,
+        table {
+            @media (min-width: $lg) {
+                @include maxWidthFullWiwthDetail();
+                @include w100();
+            }
+        }
+    }
+}
+
+// box vote, note, quote full width ở mobile
+.zce-content-body {
+
+    figure,
+    table,
+    blockquote,
+    .notebox,
+    .poll-box {
+        @media (max-width: $md) {
+            @include classOutsetLeftRightDetail();
+        }
+    }
+}
+
+// ----------------------------------
+// style cho các box trong zce-body
+// ----------------------------------
+.zce-content-body {
+
+    // blockquote
+    blockquote {
+        position: relative;
+        padding: 20px;
+        background: var(--blue-100, #E7F1FF);
+        border: 1px dashed var(--blue-200, #9EC5FE);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 66px;
+            height: 50px;
+            left: -30px;
+            top: -26px;
+            background: url("../img/baohatinh/quote.svg") 0 0 no-repeat;
+        }
+
+        .author {
+            font-size: 16px;
+            color: #0D6EFD;
+            font-style: italic;
+        }
+    }
+
+    // notebox
+    .notebox {
+        position: relative;
+        padding: 20px;
+        background: var(--yellow-100, #FFF3CD);
+        border: 1px dashed var(--yellow-500, #FFC107);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 36px;
+            height: 36px;
+            right: -18px;
+            top: -18px;
+            background: url("../img/baohatinh/pin.png") 0 0 no-repeat;
+        }
+    }
+
+    // tin liên quan chèn giữa bài viết
+    .article-relate {
+        padding: 20px;
+        background: var(--gray-100, #f8f9fa);
+
+        .story {
+            &__thumb {
+                margin-bottom: 10px;
+
+                @media (min-width: $md) {
+                    width: 200px;
+                    height: 130px;
+                    float: left;
+                    margin: 0 20px 0 0;
+                }
+
+                a {
+                    @media (max-width: $md) {
+                        display: block;
+                        padding-bottom: 66.667%;
+                    }
+                }
+            }
+
+            &__heading {
+                font-size: 20px;
+                line-height: 1.4;
+                margin-bottom: 6px;
+
+                a {
+                    color: var(--gray-800, #343a40);
+
+                    &:hover {
+                        color: var(--primary, #D72027);
+                    }
+                }
+            }
+
+            &__summary {
+                font-size: 14px;
+                line-height: 1.5;
+
+                @media (max-width: $md) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // poll-box giữa bài viết
+    .poll-box {
+        padding: 20px;
+        background: var(--blue-100, #E7F1FF);
+        border-top: 1px solid var(--blue-200, #9EC5FE);
+
+        .box-heading {
+            font-size: 13px;
+            line-height: 1.3;
+            font-weight: 700;
+            color: var(--gray-900, #212529);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .box-content {
+            &>* {
+                font-size: 16px;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            label {
+                cursor: pointer;
+                display: block;
+
+                input {
+                    margin-right: 6px;
+                }
+
+                input[type='radio'] {
+                    accent-color: var(--secondary, #B40C0E);
+                }
+            }
+        }
+
+        .wrap-button {
+            >* {
+                font-size: 13px;
+                padding: 3px 12px;
+                border: 0 none;
+                cursor: pointer;
+            }
+
+            .btn-send {
+                color: #fff;
+                font-weight: 600;
+                height: 28px;
+                background: var(--secondary, #B40C0E);
+
+                &:hover {
+                    background: var(--primary, #D72027);
+                }
+            }
+
+            .btn-see {
+                color: #0D6EFD;
+                background: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    // topic liên quan chèn giữa bài viết
+    .related-topic {
+        padding: 20px;
+        background: var(--gray-100, #f8f9fa);
+        border-top: 1px solid var(--primary, #D72027);
+
+        .box-heading {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            background: var(--primary, #D72027);
+            width: fit-content;
+            margin-top: -20px;
+
+            * {
+                color: #fff;
+            }
+        }
+
+        .story {
+            margin-top: 12px;
+
+            &__heading {
+                font-size: 16px;
+                line-height: 1.4;
+                font-weight: 500;
+                display: flex;
+
+                &:before {
+                    content: "";
+                    min-width: 4px;
+                    height: 4px;
+                    background: var(--primary, #D72027);
+                    border-radius: 50%;
+                    top: 10px;
+                    position: relative;
+                    margin-right: 12px;
+                }
+
+                a {
+                    color: $body-color;
+
+                    &:hover {
+                        color: var(--primary, #D72027);
+                    }
+                }
+            }
+        }
+    }
+}
+
+related-content {
+    display: block;
+    background: var(--gray-100, #f8f9fa);
+    border-radius: 8px;
+    overflow: hidden;
+
+    .img {
+        margin-bottom: 10px;
+
+        @media (min-width: $md) {
+            width: 200px;
+            height: 130px;
+            float: left;
+            margin: 0 20px 0 0;
+        }
+
+        img {
+            border-radius: 0;
+        }
+    }
+
+    .info {
+        padding: 16px 20px 6px;
+
+        a {
+            font-size: 18px;
+            line-height: 1.4;
+            color: var(--gray-800, #343a40);
+            font-weight: 600;
+            display: block;
+        }
+    }
+
+    .date {
+        font-size: 13px;
+        color: #888;
+    }
+}
+
+.related-news {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: var(--gray-100, #f8f9fa);
+
+    .box-heading {
+        font-size: 13px;
+        line-height: 1.3;
+        font-weight: 600;
+        color: var(--primary, #D72027);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .story {
+        margin-top: 12px;
+
+        &__heading {
+            font-size: 16px;
+            line-height: 1.4;
+            font-weight: 500;
+            display: flex;
+
+            &:before {
+                content: "";
+                min-width: 4px;
+                height: 4px;
+                background: var(--primary, #D72027);
+                border-radius: 50%;
+                top: 10px;
+                position: relative;
+                margin-right: 12px;
+            }
+
+            a {
+                color: $body-color;
+
+                &:hover {
+                    color: var(--primary, #D72027);
+                }
+            }
+        }
+    }
+}
+
+// Support old-color
+.xanhnhat,
+.camnhat,
+.camtren {
+    line-height: 1.5;
+    border-collapse: separate;
+    padding: 20px;
+
+    >*:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    br {
+        content: "";
+        margin: 12px;
+        display: block;
+    }
+}
+
+.xanhnhat {
+    background: #E4F5FA;
+    border: 0;
+}
+
+.camnhat {
+    background: #eee;
+    border-left: solid 3px #FF6600;
+}
+
+.zce-content-body {
+
+    table.xanhnhat,
+    table.camnhat,
+    table.camtren {
+        td {
+            padding: 20px;
+        }
+
+        p:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    table.camtren {
+        td {
+            background: #eee;
+        }
+
+        tr:first-child>td:first-child {
+            width: 183px;
+            border-top: solid 3px #FF6600;
+        }
+
+        tr:last-child>td {
+            border-radius: 0 0 10px 10px;
+        }
+    }
+}
+
+#tinymce table.camtren tr:first-child {
+    height: 1px;
+    min-height: 1px;
+
+    &>td:first-child {
+        width: 183px;
+        border-top: solid 3px #FF6600
+    }
+}

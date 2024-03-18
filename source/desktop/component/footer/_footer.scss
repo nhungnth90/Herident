@@ -1,0 +1,43 @@
+/* ====================================
+   FOOTER
+   ==================================== */
+
+.site-footer {
+    background: var(--secondary, #B40C0E);
+
+    .footer-info {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 30px;
+        @include clearfix;
+
+        * {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        a {
+            display: inline;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .logo {
+            width: 320px;
+            height: 53px;
+            background: url("../img/logo-default.svg?v=1.1") 0 0 /320px no-repeat;
+            display: block;
+            text-indent: -999em;
+            grid-column: 1/3;
+            filter: brightness(0) invert(1);
+        }
+
+        .right {
+            text-align: right;
+        }
+    }
+}

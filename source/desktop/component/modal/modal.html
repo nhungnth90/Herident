@@ -1,0 +1,87 @@
+<div class="modal" data-target="loginModal">
+    <div class="modal-header">
+        <h3 class="modal-title">Đăng nhập</h3>
+        <button type="button" class="btn-close"><i class="ic-close"></i></button>
+    </div>
+    <div class="modal-body scroll">
+        <div class="form-group">
+            <input type="email" class="form-control" name="input-email" placeholder="Email">
+            <div class="form-text">Bạn chưa nhập email.</div>
+        </div>
+        <div class="form-group">
+            <div class="d-flex">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+                <i class="ic-eye"></i>
+            </div>
+            <a href="#" class="fw-link btn-modal" data-target="fwModal">Quên mật khẩu</a>
+        </div>
+        <button type="button" class="btn-submit">Đăng nhập</button>
+        <p class="text-decor">hoặc</p>
+        <a href="javascript:void(0);" class="incognito notlogin">Bình luận không cần đăng nhập</a>
+        <p class="text-decor">Hoặc đăng nhập bằng</p>
+        <div class="social">
+            <a href="#" class="fb" title="Facebook">
+                <i class="ic-facebook"></i>
+            </a>
+            <a href="#" class="gg" title="Google">
+                <i class="ic-google"></i>
+            </a>
+            <a href="#" class="zl" title="Zalo">
+                <i class="ic-zalo"></i>
+            </a>
+        </div>
+        <p>Bạn chưa có tài khoản? <a href="#" class="register btn-modal" data-target="registerModal">Đăng ký</a></p>
+    </div>
+</div> <!-- modal login -->
+
+<div class="modal" data-target="registerModal">
+    <div class="modal-header">
+        <h3 class="modal-title">Đăng ký</h3>
+        <button type="button" class="btn-close"><i class="ic-close"></i></button>
+    </div>
+    <div class="modal-body scroll">
+        <div class="form-group">
+            <input type="email" class="form-control" name="input-email" placeholder="Nhập email">
+        </div>
+        <div class="form-group">
+            <div class="d-flex">
+                <input type="password" class="form-control" name="create-password" placeholder="Tạo mật khẩu">
+                <i class="ic-eye"></i>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="input-name" placeholder="Tên hiển thị khi bình luận">
+        </div>
+        <button type="button" class="btn-submit">Tạo tài khoản</button>
+        <p>Hoặc tạo tài khoản với</p>
+        <div class="social">
+            <a href="#" class="fb" title="Facebook">
+                <i class="ic-facebook"></i>
+            </a>
+            <a href="#" class="gg" title="Google">
+                <i class="ic-google"></i>
+            </a>
+            <a href="#" class="zl" title="Zalo">
+                <i class="ic-zalo"></i>
+            </a>
+        </div>
+        <p class="policy">Khi bấm tạo tài khoản bạn đã đồng ý với <a href="#">quy định</a> của tòa soạn</p>
+    </div>
+</div> <!-- modal register -->
+
+<div class="modal" data-target="fwModal">
+    <div class="modal-header">
+        <h3 class="modal-title">Quên mật khẩu</h3>
+        <button type="button" class="btn-close"><i class="ic-close"></i></button>
+    </div>
+    <div class="modal-body scroll">
+        <div class="heading-body">Nhập email của bạn để lấy lại mật khẩu</div>
+        <div class="form-group">
+            <input type="email" class="form-control" name="your-email" placeholder="Nhập email của bạn">
+        </div>
+        <div class="recaptcha">
+            <img src="https://www.dstny.se/app/uploads/captcha-norobot.png" alt="">
+        </div>       
+      <button type="button" class="btn-submit">Xác nhận</button>
+    </div>
+</div> <!-- modal password -->

@@ -1,0 +1,298 @@
+/* ====================================
+   ICONS
+   ==================================== */
+
+// iconmoon
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon/icomoon.woff?v=1.5') format('woff'),
+        url('../fonts/icomoon/icomoon.svg?v=1.5#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="ic-type-"],
+[class^="ic-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-audio::before {
+    content: "\e908";
+}
+
+.ic-bell::before {
+    content: "\e928";
+}
+
+.ic-checkmark::before {
+    content: "\e92b";
+}
+
+.ic-chevron-down::before {
+    content: "\e900";
+}
+
+.ic-chevron-up::before {
+    content: "\e926";
+}
+
+.ic-chevrons-up::before {
+    content: "\e901";
+}
+
+.ic-close::before {
+    content: "\e90f";
+}
+
+.ic-clock::before {
+    content: "\e92d";
+}
+
+.ic-comment::before {
+    content: "\e90e";
+}
+
+.ic-epaper::before {
+    content: "\e930";
+}
+
+.ic-eye::before {
+    content: "\e904";
+}
+
+.ic-eye-slash::before {
+    content: "\e925";
+}
+
+.ic-facebook::before {
+    content: "\e905";
+}
+
+.ic-google::before {
+    content: "\e92c";
+}
+
+.ic-home::before {
+    content: "\e909";
+}
+
+.ic-interview::before {
+    content: "\e924";
+}
+
+.ic-lens::before {
+    content: "\e90b";
+}
+
+.ic-link::before {
+    content: "\e920";
+}
+
+.ic-location::before {
+    content: "\e931";
+}
+
+.ic-lock::before {
+    content: "\e92e";
+}
+
+.ic-logout::before {
+    content: "\e90c";
+}
+
+.ic-mail::before {
+    content: "\e903";
+}
+
+.ic-medal:before {
+    content: "\e906";
+}
+
+.ic-menu::before {
+    content: "\e90d";
+}
+
+.ic-paper-plane::before {
+    content: "\e927";
+}
+
+.ic-pause-light::before {
+    content: "\e910";
+}
+
+.ic-pause-solid::before {
+    content: "\e911";
+}
+
+.ic-photo::before {
+    content: "\e907";
+}
+
+.ic-picture::before {
+    content: "\e90a";
+}
+
+.ic-play-light::before {
+    content: "\e914";
+}
+
+.ic-play-solid::before {
+    content: "\e915";
+}
+
+.ic-print::before {
+    content: "\e916";
+}
+
+.ic-quiz::before {
+    content: "\e913";
+}
+
+.ic-rotate-left::before {
+    content: "\e921";
+}
+
+.ic-rotate-right::before {
+    content: "\e922";
+}
+
+.ic-search::before {
+    content: "\e917";
+}
+
+.ic-share::before {
+    content: "\e929";
+}
+
+.ic-story::before {
+    content: "\e902";
+}
+
+.ic-tags::before {
+    content: "\e918";
+}
+
+.ic-text-size::before {
+    content: "\e92a";
+}
+
+.ic-thumbs-up::before {
+    content: "\e919";
+}
+
+.ic-twitter::before {
+    content: "\e91a";
+}
+
+.ic-user::before {
+    content: "\e91b";
+}
+
+.ic-video::before {
+    content: "\e91c";
+}
+
+.ic-volume::before {
+    content: "\e91d";
+}
+
+.ic-volume-slash::before {
+    content: "\e923";
+}
+
+.ic-youtube::before {
+    content: "\e92f";
+}
+
+.ic-zalo-line::before {
+    content: "\e91e";
+}
+
+.ic-zalo-solid::before {
+    content: "\e91f";
+}
+
+// ----------
+
+.ic-emagazine {
+    width: 18px;
+    height: 20px;
+    background: url("../img/ic-emagazine.png?v=1.1") 0 -42px no-repeat;
+    display: inline-block;
+}
+
+.ic-infographic {
+    width: 18px;
+    height: 20px;
+    background: url("../img/ic-infographic.png?v=1.1") 0 -40px no-repeat;
+    display: inline-block;
+}
+
+.ic-live {
+    font-family: $font-family-title !important;
+    font-size: 13px !important;
+    color: #fff !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    background: var(--primary, #D72027);
+    border-radius: 3px;
+    top: -3px !important;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        margin-right: 6px;
+        border-radius: 50%;
+        animation: blinker 1s linear infinite;
+    }
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+// sprites
+.ic-play-circle,
+.ic-tiktok {
+    background: url("../img/sprites.svg?v=1.4") 0 0 no-repeat;
+    display: block;
+}
+
+.story__thumb .ic-play-circle {
+    width: 60px;
+    height: 60px;
+    background-position: 0 -100px;
+    left: 24px;
+    bottom: 24px;
+    z-index: 1;
+}
+
+.ic-tiktok {
+    width: 14px;
+    height: 16px;
+    background-position: 0 -200px;
+}
+
+.ic-zalo {
+    width: 20px;
+    height: 20px;
+    background: url("../img/ic-zalo.png") 0 0 no-repeat;
+    display: block;
+}

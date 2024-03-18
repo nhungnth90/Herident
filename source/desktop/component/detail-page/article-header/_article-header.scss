@@ -1,0 +1,137 @@
+/* ====================================
+    ARTICLE HEADER
+   ==================================== */
+
+.article {
+    .l-content {
+        @media (min-width: $lg) {
+            padding-right: var(--column-gap);
+            margin-right: -1px;
+            border-right: 1px solid $border-color;
+        }
+    }
+
+    .breadcrumb {
+        padding: 0;
+        margin-bottom: 6px;
+        border: 0 none;
+
+        * {
+            font-family: $font-family-base;
+            font-size: 12px !important;
+            font-weight: 600;
+        }
+
+        .sub {
+            margin-left: inherit;
+
+            a {
+                margin: 0;
+
+                &::before {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    &__sub-title {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        font-family: $font-family-title;
+        font-size: 32px;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-bottom: 12px;
+
+        i {
+            color: #555;
+            margin-right: 6px;
+            position: relative;
+            top: 3px;
+        }
+
+        .ic-emagazine,
+        .ic-infographic {
+            top: 0;
+        }
+    }
+
+    &__meta {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $border-color;
+
+        .meta {
+            display: flex;
+            margin-right: auto;
+
+            * {
+                color: var(--gray-600, #6c757d);
+            }
+
+            a {
+                color: var(--primary, #D72027);
+            }
+
+            &>*:not(:first-child)::before {
+                content: "|";
+                color: #ddd;
+                padding: 0 10px;
+            }
+        }
+
+        .gg-news {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0 16px;
+            background: var(--yellow-100, #FFF3CD);
+            border: 1px dashed var(--yellow-500, #FFC107);
+            border-radius: 20px;
+        }
+    }
+
+    &__sapo {
+        font-size: 18px;
+        font-weight: 700;
+        text-align: justify;
+        margin-bottom: 20px;
+
+        * {
+            display: inline;
+        }
+
+        a {
+            color: var(--secondary, #B40C0E);
+
+            &:hover {
+                color: var(--success, #002E44);
+            }
+        }
+    }
+
+    &__avatar {
+        margin-bottom: 20px;
+
+        img {
+            width: max-content;
+            max-width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            font-size: 16px;
+            color: var(--gray-600, #6c757d);
+            text-align: center;
+            padding: 10px 0;
+        }
+    }
+}

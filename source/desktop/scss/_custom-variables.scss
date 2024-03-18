@@ -1,0 +1,78 @@
+/* ====================================
+   CUSTOM VARIABLES
+   ==================================== */
+
+:root {
+    --gray-100: #f5f7f9;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+
+    // add color to color maps
+    --primary: #ED1C24;
+    --secondary: #F2DFCE;
+    --success: #FFC107;
+}
+
+// body
+html {
+    font-size: 62.5%;
+}
+
+$body-bg: #FFF1E5;
+$body-color: #343a40;
+$border-color: rgba(0, 0, 0, .1);
+
+
+// Links
+$link-color: #343a40;
+$link-decoration: none;
+$link-hover-color: #D72027;
+$link-hover-decoration: none;
+
+
+// font
+$font-family-sans-serif: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-title: "PlayfairDisplay", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-heading: "UVFPistilli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+// stylelint-enable value-keyword-case
+
+$font-size-base: 14px;
+$line-height-base: 1.5;
+
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+// Breakpoint
+$md: 768px;
+$lg: 1024px;
+$xl: 1200px;
+
+:root {
+    --column-gap: 20px;
+    --container: 730px;
+}
+
+@media (min-width: $lg) {
+    :root {
+        --column-gap: 20px;
+        --container: 980px;
+    }
+}
+
+@media (min-width: $xl) {
+    :root {
+        --column-gap: 30px;
+        --container: 1170px;
+    }
+}

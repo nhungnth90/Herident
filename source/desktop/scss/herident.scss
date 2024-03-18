@@ -1,0 +1,59 @@
+/* ====================================
+   TONG BI THU NGUYEN PHU TRONG
+   ==================================== */
+
+@import "custom-variables";
+@import "mixins/global";
+
+// ----------------------------------
+// INFO : style for global
+// ----------------------------------
+@import "reboot";
+@import "fonts";
+@import "icons";
+@import "layout";
+@import "fyi";
+@import "story";
+@import "styles";
+
+// ----------------------------------
+// INFO : style for component 
+// ----------------------------------
+@import "../component/header/header";
+// @import "../component/navigation/navigation";
+// @import "../component/footer/footer";
+// @import "../component/breadcrumb/breadcrumb";
+// @import "../component/modal/modal";
+
+// ----------------------------------
+// INFO : style for box-style
+// ----------------------------------
+// @import "../component/box-style/multi-pack/multi-pack";
+// @import "../component/box-style/timeline/timeline";
+// @import "../component/box-style/box-aside/box-aside";
+// @import "../component/box-style/box-ads/box-ads";
+// @import "../component/box-style/popular/popular";
+// @import "../component/box-style/suggest/suggest";
+
+// ----------------------------------
+// INFO : style for detail-page
+// ----------------------------------
+// @import "../component/detail-page/article-header/article-header";
+// @import "../component/detail-page/article-body/article-body";
+// @import "../component/detail-page/audio/audio";
+
+// ----------------------------------
+// INFO : style for pages
+// ----------------------------------
+// @import "../component/box-style/abf-cate/abf-cate";
+// @import "../component/box-style/highlight/highlight";
+// @import "../component/search-tags/search-tags";
+// @import "../component/multimedia-page/multimedia";
+// @import "../component/location-page/location-page";
+// @import "../component/topic-page/topic-page";
+// @import "../component/video/video";
+// @import "../component/podcast/podcast";
+// @import "../component/e-paper/e-paper";
+// @import "../component/error/error";
+// @import "../component/user/user";
+// @import "../component/ad/ad";
