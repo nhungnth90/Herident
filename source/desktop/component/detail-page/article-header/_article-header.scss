@@ -3,135 +3,133 @@
    ==================================== */
 
 .article {
-    .l-content {
-        @media (min-width: $lg) {
-            padding-right: var(--column-gap);
-            margin-right: -1px;
-            border-right: 1px solid $border-color;
-        }
+    width: 80%;
+    margin: 0 auto 100px;
+
+    @media (min-width: $lg) {
+        width: 630px;
     }
 
-    .breadcrumb {
-        padding: 0;
-        margin-bottom: 6px;
-        border: 0 none;
-
-        * {
-            font-family: $font-family-base;
-            font-size: 12px !important;
-            font-weight: 600;
-        }
-
-        .sub {
-            margin-left: inherit;
-
-            a {
-                margin: 0;
-
-                &::before {
-                    content: none;
-                }
-            }
-        }
-    }
-
-    &__sub-title {
-        font-size: 16px;
-        font-weight: 400;
-        margin-bottom: 6px;
+    >*:not(:last-child) {
+        margin-bottom: 30px;
     }
 
     &__title {
         font-family: $font-family-title;
-        font-size: 32px;
-        line-height: 1.2;
+        font-size: 40px;
+        line-height: 1.4;
+        color: var(--gray-900);
         font-weight: 600;
-        margin-bottom: 12px;
-
-        i {
-            color: #555;
-            margin-right: 6px;
-            position: relative;
-            top: 3px;
-        }
-
-        .ic-emagazine,
-        .ic-infographic {
-            top: 0;
-        }
+        text-align: center;
     }
 
     &__meta {
         display: flex;
         align-items: center;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
+        padding: 12px 30px;
+        border-top: 1px solid $border-color;
         border-bottom: 1px solid $border-color;
 
         .meta {
-            display: flex;
             margin-right: auto;
 
             * {
-                color: var(--gray-600, #6c757d);
+                color: var(--gray-600);
             }
 
             a {
-                color: var(--primary, #D72027);
-            }
-
-            &>*:not(:first-child)::before {
-                content: "|";
-                color: #ddd;
-                padding: 0 10px;
+                color: var(--primary);
             }
         }
 
-        .gg-news {
-            height: 30px;
+        .author {
+            color: var(--gray-900);
+            font-weight: 500;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        .social {
             display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 0 16px;
-            background: var(--yellow-100, #FFF3CD);
-            border: 1px dashed var(--yellow-500, #FFC107);
-            border-radius: 20px;
+            gap: 10px;
+
+            a {
+                color: #fff;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+
+                &:hover {
+                    opacity: .9;
+                }
+            }
+
+            .fb {
+                font-size: 16px;
+                background: #3B5998;
+            }
+
+            .zl {
+                background: #018FE5;
+            }
+
+            .tt {
+                background: #55ACEE;
+            }
+
+            .em {
+                background: #0BA5BE;
+            }
         }
     }
 
     &__sapo {
         font-size: 18px;
-        font-weight: 700;
-        text-align: justify;
-        margin-bottom: 20px;
+        line-height: 1.6;
+        text-align: center;
+        background: var(--secondary);
+        padding: 24px;
+        border-radius: 6px;
 
         * {
             display: inline;
         }
 
         a {
-            color: var(--secondary, #B40C0E);
+            color: var(--primary);
 
             &:hover {
-                color: var(--success, #002E44);
+                text-decoration: underline;
             }
         }
     }
 
     &__avatar {
-        margin-bottom: 20px;
-
         img {
             width: max-content;
             max-width: 100%;
             height: auto;
+            border-radius: 6px;
         }
 
         figcaption {
-            font-size: 16px;
-            color: var(--gray-600, #6c757d);
+            color: var(--gray-600);
             text-align: center;
             padding: 10px 0;
+            margin: auto;
+            max-width: 630px;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 50px;
+                height: 1px;
+                background: rgba(0, 0, 0, .3);
+                margin: 20px auto 0;
+            }
         }
     }
 }

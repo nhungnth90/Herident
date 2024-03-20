@@ -160,4 +160,5 @@ exports.build = parallel(
 
 /*
 gulp build  --path desktop
+gulp build  --path mobile
 */

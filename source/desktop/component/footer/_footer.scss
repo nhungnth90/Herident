@@ -3,18 +3,30 @@
    ==================================== */
 
 .site-footer {
-    background: var(--secondary, #B40C0E);
+    background: url("../img/footer-bg.png") center 0 no-repeat;
+    background-size: cover;
+    padding: 32px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 160px;
+    }
+
+    .logo {
+        width: 164px;
+        height: 60px;
+        background: url("../img/nd-logo.png") 0 0 no-repeat;
+        display: block;
+        text-indent: -999em;
+    }
 
     .footer-info {
-        display: grid;
-        gap: 16px;
-        grid-template-columns: repeat(2, 1fr);
-        padding-top: 30px;
-        @include clearfix;
+        >*:not(:last-child) {
+            margin-bottom: 8px;
+        }
 
         * {
-            font-size: 13px;
-            line-height: 1.6;
             color: #fff;
         }
 
@@ -22,22 +34,13 @@
             display: inline;
 
             &:hover {
-                text-decoration: underline;
+                color: var(--success);
             }
         }
 
-        .logo {
-            width: 320px;
-            height: 53px;
-            background: url("../img/logo-default.svg?v=1.1") 0 0 /320px no-repeat;
-            display: block;
-            text-indent: -999em;
-            grid-column: 1/3;
-            filter: brightness(0) invert(1);
-        }
-
-        .right {
-            text-align: right;
+        strong,
+        b {
+            font-weight: 600;
         }
     }
 }

@@ -1,14 +1,14 @@
 <header class="site-header">
-    <nav class="navigation">
-        <ul class="navbar-nav">
-            <li><a href="#" class="nav-link active">Giới thiệu</a></li>
-            <li><a href="#" class="nav-link">Dịch vụ</a></li>
-            <li><a href="#" class="nav-link">Tin tức sự kiện</a></li>
-            <li><a href="#" class="nav-link">Tư liệu</a></li>
-            <li><a href="#" class="nav-link">Liên hệ</a></li>
-        </ul>
-    </nav>
+    @@include('../navigation/navigation.html')
     <h1>
         <a href="index.html" class="logo" title="Herident">Herident</a>
     </h1>
+    <div class="search-form">
+        <input type="text" name="Tìm kiếm" placeholder="Tìm kiếm">
+        <button type="button" class="btn" aria-label="Tìm kiếm">
+            <i class="ic-search"></i>
+        </button>
+    </div>
+    <div class="hotline"><i class="ic-phone"></i>0916.531.699</div>
+    <a href="#" class="booking"><i class="ic-calendar"></i>Đặt lịch khám</a>
 </header>   <!-- end site-header -->

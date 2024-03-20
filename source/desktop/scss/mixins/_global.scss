@@ -9,66 +9,19 @@
 // Box Heading
 @mixin box-heading {
     font-family: $font-family-heading;
-    font-size: 30px;
-    line-height: 1.2;
-    color: var(--gray-900, #212529);
+    font-size: 36px;
+    line-height: 1.3;
+    color: var(--gray-900);
     font-weight: 400;
     text-transform: uppercase;
-    position: relative;
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: min-content auto;
-    gap: 0 20px;
+    text-align: center;
+    margin-bottom: 30px;
 
-    &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 1px;
-        background: $border-color;
-        position: relative;
-        top: calc(50% - 0.5px);
-    }
+    a {
+        color: var(--gray-900);
 
-    * {
-        color: var(--gray-900, #212529);
-        white-space: nowrap;
-    }
-
-    a:hover {
-        color: var(--primary, #D72027);
-    }
-}
-
-// Aside Heading
-@mixin aside-heading {
-    padding: 20px;
-    background: var(--gray-100, #f8f9fa);
-    border-top: 1px solid var(--primary, #D72027);
-
-    .box-heading {
-        font-family: $font-family-heading;
-        font-size: 26px;
-        line-height: 1.2;
-        margin-bottom: 20px;
-    }
-}
-
-// Blur background
-@mixin blur-bg {
-    position: relative;
-
-    &::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background: rgba(85, 36, 0, .3);
-        backdrop-filter: blur(6px);
-        position: absolute;
-    }
-
-    &>* {
-        position: relative;
+        &:hover {
+            color: var(--primary);
+        }
     }
 }

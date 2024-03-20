@@ -6,53 +6,83 @@
     height: 70px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-left: 30px;
-
-    .navigation {
-        .navbar-nav {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-link {
-            text-transform: uppercase;
-
-            &:hover,
-            &.active {
-                color: var(--success);
-            }
-        }
-    }
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .06);
+    // &.is-sticky {
+    //     .site-header__nav {
+    //         background: url("../img/header-bg.png") center 0 no-repeat;
+    //         background-size: cover;
+    //         z-index: 99;
+    //         width: 100%;
+    //         position: fixed;
+    //         top: 0;
+    //         left: 0;
+    //     }
+    // }
 
     .logo {
-        width: 110px;
-        height: 30px;
-        background: url("../img/nd-logo.png") 0 0/110px no-repeat;
+        width: 174px;
+        height: 124px;
+        background: url("../img/logo-default.png") 0 0 no-repeat;
         display: block;
         text-indent: -999em;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
-}
 
-.search-form {
-    width: 200px;
-    display: flex;
-    background: rgba(255, 255, 255, .1);
+    .search-form {
+        width: 200px;
+        display: flex;
+        background: rgba(255, 255, 255, .1);
+        border-radius: 20px;
 
-    * {
+        input {
+            width: 100%;
+            height: 40px;
+            padding-left: 20px;
+            background: none;
+            border: 0 none;
+
+            &::placeholder {
+                // color: #fff;
+            }
+        }
+
+        .btn {
+            font-size: 16px;
+            min-width: 50px;
+        }
+    }
+
+    .hotline,
+    .booking {
+        font-size: 16px;
         color: #fff;
+        width: 180px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        i {
+            font-size: 20px;
+        }
     }
 
-    input {
-        width: 100%;
-        height: 40px;
-        padding: 0 20px;
-        background: none;
-        border: 0 none;
+    .hotline {
+        background: var(--primary);
+        border-radius: 30px;
+    }
 
-        &::placeholder {
-            color: #fff;
+    .booking {
+        height: 70px;
+        background: var(--info);
+
+        i {
+            position: relative;
+            top: -2px;
         }
     }
 }

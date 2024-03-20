@@ -2,66 +2,12 @@
    LAYOUT  
    ==================================== */
 
-.site-body {
-    padding-bottom: 50px;
-    @include clearfix();
-}
-
 .container {
     width: var(--container);
     margin-right: auto;
     margin-left: auto;
 }
 
-.w-700 {
-    width: 80%;
-    margin: auto;
-
-    @media (min-width: $lg) {
-        width: 700px;
-    }
-}
-
-.col {
-    display: grid;
-    gap: var(--column-gap);
-
-    &-xl-2 {
-        @media (min-width: $lg) {
-            grid-template-columns: 1fr 300px;
-        }
-
-        >.banner {
-            grid-column: 1/3;
-        }
-    }
-
-    &-2 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px 20px;
-    }
-
-    &-3 {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px 30px;
-    }
-
-    &-4 {
-        grid-template-columns: repeat(2, 1fr);
-        margin-bottom: var(--bht-margin);
-
-        @media (min-width: $lg) {
-            grid-template-columns: repeat(4, 1fr);
-        }
-    }
-}
-
-.sidebar {
-    @media (max-width: $md) {
-        display: none;
-    }
-
-    &>*:not(:last-child) {
-        margin-bottom: var(--column-gap);
-    }
+.site-body {
+    padding-bottom: 100px;
 }

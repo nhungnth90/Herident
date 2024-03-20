@@ -14,9 +14,10 @@
     --gray-900: #212529;
 
     // add color to color maps
-    --primary: #ED1C24;
-    --secondary: #F2DFCE;
-    --success: #FFC107;
+    --primary:   #0072BC;
+    --secondary: #0063A4;
+    --success:   #26475F;
+    --info:      #FFC107;
 }
 
 // body
@@ -30,9 +31,9 @@ $border-color: rgba(0, 0, 0, .1);
 
 
 // Links
-$link-color: #343a40;
+$link-color: #26475F;
 $link-decoration: none;
-$link-hover-color: #D72027;
+$link-hover-color: #0063A4;
 $link-hover-decoration: none;
 
 
