@@ -53,3 +53,21 @@
         background: #A30000;
     }
 }
+
+// Swiper
+.swiper .swiper-pagination {
+    position: inherit;
+    margin-top: 16px;
+
+    .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+        transition: all .2s ease-in-out;
+
+        &-active {
+            background: var(--primary);
+            width: 24px;
+            border-radius: 20px;
+        }
+    }
+}

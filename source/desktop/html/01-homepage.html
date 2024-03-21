@@ -12,14 +12,13 @@
     <link rel="shortcut icon" href="../styles/img/favicon.ico" type="image/x-icon">
     @@include('../component/box-style/asset/font-preload.html')
     <link rel="stylesheet" href="../styles/css/herident.css">
+    <link rel="stylesheet" href="../styles/css/swiper-bundle.min.css">
 </head>
 <body>
     @@include('../component/header/header.html')
 
     <div class="site-body">
-        <div class="container">
-            
-        </div>
+        @@include('../component/box-style/abf-homepage/abf-homepage.html')
     </div>  <!-- end .site-body -->
 
     <!-- @@include('../component/footer/footer.html') -->
@@ -27,5 +26,23 @@
     <!-- JS -->
     <script src="../js/jquery-3.1.1.js"></script>
     <script src="../js/ui.js"></script>
+
+    <!-- JS Swiper -->
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script>
+        // topic
+        var swiper = new Swiper('#highlight_swiper', {
+            spaceBetween: 20,
+            loop: true,
+            // autoplay: {
+            //     delay: 3500,
+            // },
+            a11y: false,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 </html>

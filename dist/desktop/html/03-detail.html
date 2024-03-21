@@ -34,36 +34,65 @@
   <header class="site-header">
     <nav class="navigation">
       <ul class="navbar-nav">
-        <li>
-          <a href="#" class="nav-link">
+        <li class="main menu">
+          <div class="nav-link">
             <i class="ic-menu"></i>
+          </div>
+        </li>
+        <li class="main">
+          <a href="02-category.html" class="nav-link">Giới thiệu <i class="ic-arrow-down"></i>
           </a>
+          <div class="subnav">
+            <a href="02-category.html">Chuyên mục 1</a>
+            <a href="02-category.html">Chuyên mục 2</a>
+            <a href="02-category.html">Chuyên mục 3</a>
+          </div>
         </li>
-        <li>
-          <a href="#" class="nav-link">Giới thiệu</a>
+        <li class="main">
+          <a href="02-category.html" class="nav-link">Dịch vụ <i class="ic-arrow-down"></i>
+          </a>
+          <div class="subnav">
+            <a href="02-category.html">Chuyên mục 1</a>
+            <a href="02-category.html">Chuyên mục 2</a>
+            <a href="02-category.html">Chuyên mục 3</a>
+          </div>
         </li>
-        <li>
-          <a href="#" class="nav-link">Dịch vụ</a>
+        <li class="main">
+          <a href="02-category.html" class="nav-link">Tin tức sự kiện <i class="ic-arrow-down"></i>
+          </a>
+          <div class="subnav">
+            <a href="02-category.html">Chuyên mục 1</a>
+            <a href="02-category.html">Chuyên mục 2</a>
+            <a href="02-category.html">Chuyên mục 3</a>
+          </div>
         </li>
-        <li>
-          <a href="#" class="nav-link">Tin tức sự kiện</a>
+        <li class="main">
+          <a href="02-category.html" class="nav-link">Tư liệu <i class="ic-arrow-down"></i>
+          </a>
+          <div class="subnav">
+            <a href="02-category.html">Chuyên mục 1</a>
+            <a href="02-category.html">Chuyên mục 2</a>
+            <a href="02-category.html">Chuyên mục 3</a>
+          </div>
         </li>
-        <li>
-          <a href="#" class="nav-link">Tư liệu</a>
-        </li>
-        <li>
-          <a href="#" class="nav-link">Liên hệ</a>
+        <li class="main">
+          <a href="02-category.html" class="nav-link">Liên hệ</a>
         </li>
       </ul>
     </nav>
     <h1>
       <a href="index.html" class="logo" title="Herident">Herident</a>
     </h1>
+    <i class="ic-search"></i>
     <div class="search-form">
       <input type="text" name="Tìm kiếm" placeholder="Tìm kiếm">
       <button type="button" class="btn" aria-label="Tìm kiếm">
         <i class="ic-search"></i>
       </button>
+    </div>
+    <div class="language">
+      <a href="#" class="active">VI</a>
+      <a href="#">EN</a>
     </div>
     <div class="hotline">
       <i class="ic-phone"></i>0916.531.699
@@ -108,71 +137,6 @@
           </div>
         </div>
         <div class="article__sapo">Ngày 20/12, tại Hà Nội, Đảng ủy Công an Trung ương tổ chức Hội nghị để thảo luận, đánh giá, cho ý kiến đối với nhiều báo cáo quan trọng. Đồng chí Tổng Bí thư Nguyễn Phú Trọng dự và phát biểu chỉ đạo. Báo Nhân Dân xin trân trọng giới thiệu toàn văn bài phát biểu của Tổng Bí thư Nguyễn Phú Trọng tại Hội nghị.</div>
-        <div class="audio">
-          <div class="left">
-            <button class="play-button" aria-label="button">
-              <span>
-                <i class="ic-audio-pause"></i>
-              </span>
-            </button>
-            <span class="mute-wrap">
-              <button class="mute-button" aria-label="button">
-                <i class="ic-audio-volume"></i>
-              </button>
-              <div class="volume-slider" id="volume-slider">
-                <div class="volume-slider-handle"></div>
-              </div>
-            </span>
-            <div class="time-display">
-              <span class="current">0:00</span>
-              <span class="separator"> / </span>
-              <span class="duration">0:00</span>
-              <span class="live"></span>
-            </div>
-            <div class="progress-bar" id="progress-bar">
-              <span class="bg"></span>
-              <div class="wrap-recent">
-                <span class="fill-recent">
-                  <span class="current_time">0:00</span>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="right">
-            <button class="select-voice">
-              <i class="ic-audio-microphone"></i>
-              <span>Nam miền Bắc</span>
-            </button>
-            <div class="voice-board">
-              <ul>
-                <li class="is-active">
-                  <div class="voice-name" data-display-name="Nam miền Bắc" data-voice-id="1">
-                    <i class="ic-audio-waveform"></i>
-                    <span>Nam miền Bắc</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="voice-name" data-display-name="Nữ miền Bắc" data-voice-id="2">
-                    <i class="ic-audio-waveform"></i>
-                    <span>Nữ miền Bắc</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="voice-name" data-display-name="Nữ miền Nam" data-voice-id="3">
-                    <i class="ic-audio-waveform"></i>
-                    <span>Nữ miền Nam</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="voice-name" data-display-name="Nam miền Nam" data-voice-id="4">
-                    <i class="ic-audio-waveform"></i>
-                    <span>Nam miền Nam</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
         <figure class="article__avatar">
           <img src="https://source.unsplash.com/featured/1280x720?sig=1" alt="">
           <figcaption>Cần thực hiện tốt hơn nữa phương châm: Lấy phòng ngừa làm trọng, kết hợp chặt chẽ giữa phòng ngừa với quyết tâm tấn công, đánh trúng,đánh đúng các loại tội phạm theo tinh thần tích cực, khẩn trương, hiệu quả.</figcaption>
@@ -1625,9 +1589,6 @@
               </div>
             </article>
           </div>
-          <h2>
-            <center> ===== Old Style =====</center>
-          </h2>
           <div class="article__author">Quang Thành</div>
           <div class="article__source">
             <div class="source">

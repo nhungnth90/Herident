@@ -8,6 +8,30 @@
     .navbar-nav {
         display: flex;
         align-items: center;
+
+        .main:hover {
+
+            .nav-link,
+            .nav-link i {
+                color: var(--primary);
+            }
+
+            .subnav {
+                display: block;
+            }
+        }
+
+        .menu {
+            width: 70px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+
+            i {
+                font-size: 24px;
+            }
+        }
     }
 
     .nav-link {
@@ -15,10 +39,34 @@
         height: 70px;
         display: flex;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 10px;
+
+        i {
+            font-size: 20px;
+            color: #888;
+            margin-left: 2px;
+        }
     }
 
-    .ic-menu {
-        font-size: 24px;
+    .subnav {
+        display: none;
+        position: absolute;
+        z-index: 3;
+        min-width: 200px;
+        padding: 8px 0;
+        background: var(--primary);
+        border-radius: 0 0 6px 6px;
+
+        a {
+            color: #fff;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+
+            &:hover {
+                color: var(--info);
+            }
+        }
     }
 }

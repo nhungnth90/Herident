@@ -12,7 +12,6 @@
 @import "fonts";
 @import "icons";
 @import "layout";
-// @import "fyi";
 @import "story";
 @import "styles";
 
@@ -28,8 +27,8 @@
 // ----------------------------------
 // INFO : style for box-style
 // ----------------------------------
+@import "../component/box-style/abf-homepage/abf-homepage";
 @import "../component/box-style/search-filter/search-filter";
-@import "../component/box-style/masonry/masonry";
 @import "../component/box-style/related-news/related-news";
 
 // ----------------------------------
@@ -37,4 +36,3 @@
 // ----------------------------------
 @import "../component/detail-page/article-header/article-header";
 @import "../component/detail-page/article-body/article-body";
-@import "../component/detail-page/audio/audio";
