@@ -167,7 +167,7 @@
     >h3,
     >h4,
     >h5 {
-        font-family: $font-family-title;
+        
         font-weight: 600;
         text-align: center;
 
@@ -322,7 +322,7 @@
 
     .dropcap {
         &::first-letter {
-            font-family: $font-family-title;
+            
             font-size: 250%;
             line-height: 1.3;
             font-weight: 700;
@@ -385,7 +385,7 @@
 
     // blockquote
     blockquote {
-        font-family: $font-family-title;
+        
         font-size: 22px;
         line-height: 1.5;
         color: var(--info);
@@ -394,7 +394,7 @@
         padding: 0 24px 10px 24px;
 
         &::before {
-            font-family: $font-family-title;
+            
             content: "“";
             font-size: 120px;
             line-height: .7;

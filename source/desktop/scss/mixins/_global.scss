@@ -10,18 +10,23 @@
 @mixin box-heading {
     font-family: $font-family-heading;
     font-size: 36px;
-    line-height: 1.3;
-    color: var(--gray-900);
-    font-weight: 400;
+    line-height: 1.2;
+    color: var(--success);
+    font-weight: 700;
     text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
+    display: inline-block;
+    margin-bottom: 50px;
+
+    &::after {
+        content:"";
+        display: block;
+        width: 100%;
+        height: 5px;
+        background: var(--info);
+        margin-top: -14px;
+    }
 
     a {
-        color: var(--gray-900);
-
-        &:hover {
-            color: var(--primary);
-        }
+        color: var(--success);
     }
 }

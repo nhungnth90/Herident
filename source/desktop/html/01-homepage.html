@@ -19,6 +19,7 @@
 
     <div class="site-body">
         @@include('../component/box-style/abf-homepage/abf-homepage.html')
+        @@include('../component/box-style/zone-intro/zone-intro.html')
     </div>  <!-- end .site-body -->
 
     <!-- @@include('../component/footer/footer.html') -->
@@ -30,13 +31,12 @@
     <!-- JS Swiper -->
     <script src="../js/swiper-bundle.min.js"></script>
     <script>
-        // topic
+        // highlight
         var swiper = new Swiper('#highlight_swiper', {
-            spaceBetween: 20,
             loop: true,
-            // autoplay: {
-            //     delay: 3500,
-            // },
+            autoplay: {
+                delay: 3500,
+            },
             a11y: false,
             pagination: {
                 el: ".swiper-pagination",

@@ -26,20 +26,24 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.ic-arrow-down:before {
-    content: "\e900";
-}
-
-.ic-arrow-left:before {
-    content: "\e901";
-}
-
 .ic-arrow-right:before {
-    content: "\e902";
+    content: "\e900";
 }
 
 .ic-calendar:before {
     content: "\e903";
+}
+
+.ic-chervon-down:before {
+    content: "\e901";
+}
+
+.ic-chervon-left:before {
+    content: "\e902";
+}
+
+.ic-chervon-right:before {
+    content: "\e90c";
 }
 
 .ic-clock:before {

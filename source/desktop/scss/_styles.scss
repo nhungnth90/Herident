@@ -2,6 +2,16 @@
    STYLES
    ==================================== */
 
+.wrap-heading {
+    text-align: center;
+}
+
+.summary {
+    line-height: 1.6;
+    color: var(--gray-600);
+}
+
+// Form
 .form-group {
     .form-label {
         font-size: 12px;
@@ -36,37 +46,36 @@
 }
 
 // Button
-.btn-primary {
-    font-size: 16px;
-    color: #fff;
-    text-transform: uppercase;
-    background: var(--primary);
+.btn {
+    color: var(--secondary);
     width: 150px;
-    height: 48px;
-    margin: auto;
+    height: 50px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-radius: 6px;
+    justify-content: center;
+    margin-top: 30px;
+    border: 1px solid var(--primary);
+    border-radius: 30px;
 
     &:hover {
-        background: #A30000;
+        color: #fff;
+        background: var(--primary);
     }
 }
 
 // Swiper
 .swiper .swiper-pagination {
-    position: inherit;
-    margin-top: 16px;
-
     .swiper-pagination-bullet {
         width: 6px;
         height: 6px;
+        background: rgba(255, 255, 255, .4);
+        margin: 0 6px !important;
+        opacity: 1;
         transition: all .2s ease-in-out;
 
         &-active {
-            background: var(--primary);
-            width: 24px;
+            width: 30px;
+            background: #fff;
             border-radius: 20px;
         }
     }
