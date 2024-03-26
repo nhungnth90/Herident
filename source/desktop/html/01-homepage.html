@@ -20,6 +20,7 @@
     <div class="site-body">
         @@include('../component/box-style/abf-homepage/abf-homepage.html')
         @@include('../component/box-style/zone-intro/zone-intro.html')
+        @@include('../component/box-style/zone-service/zone-service.html')
     </div>  <!-- end .site-body -->
 
     <!-- @@include('../component/footer/footer.html') -->
@@ -35,13 +36,23 @@
         var swiper = new Swiper('#highlight_swiper', {
             loop: true,
             autoplay: {
-                delay: 3500,
+                delay: 5500,
             },
             a11y: false,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
+        });
+
+        // service
+        var swiper = new Swiper("#service_swiper", {
+            slidesPerView: 5.4,
+            // centeredSlides: true,
+            spaceBetween: 3,
+            // loop: true,
+            grabCursor: true,
+            a11y: false,
         });
     </script>
 </body>

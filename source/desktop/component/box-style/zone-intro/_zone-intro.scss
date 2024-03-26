@@ -3,6 +3,8 @@
    ==================================== */
 
 .zone--intro {
+   margin-bottom: 100px;
+
    .wrap-heading {
       margin-bottom: 50px;
 
@@ -19,6 +21,12 @@
       &::after {
          width: 190px;
          margin-left: auto;
+      }
+   }
+
+   .box-content {
+      >*:not(:last-child) {
+         margin-bottom: 50px;
       }
    }
 
@@ -39,7 +47,6 @@
       grid-template-columns: 270px 270px 1fr;
       gap: 30px;
       padding-bottom: 50px;
-      margin-bottom: 50px;
       border-bottom: 1px solid $border-color;
 
       .equipment-sapo {
@@ -89,9 +96,28 @@
    }
 
    .intro-office {
-      .intro-thumb {
-         float: left;
-         margin-right: 30px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      align-items: center;
+
+      .subheading {
+         font-family: $font-family-title;
+         font-size: 36px;
+         line-height: 1.2;
+         color: var(--success);
+         font-weight: 500;
+         margin-bottom: 20px;
+      }
+   }
+
+   .intro-meta {
+      padding: 0 30px;
+      text-align: center;
+
+      .btn {
+         margin-left: auto;
+         margin-right: auto;
       }
    }
 }
