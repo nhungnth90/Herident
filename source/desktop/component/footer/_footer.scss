@@ -3,44 +3,36 @@
    ==================================== */
 
 .site-footer {
-    background: url("../img/footer-bg.png") center 0 no-repeat;
-    background-size: cover;
-    padding: 32px 0;
+    padding: 40px 0;
+    background: #003B61;
 
-    .container {
-        display: flex;
-        align-items: center;
-        gap: 160px;
+    * {
+        color: rgba(#fff, .8);
     }
 
-    .logo {
-        width: 164px;
-        height: 60px;
-        background: url("../img/nd-logo.png") 0 0 no-repeat;
-        display: block;
-        text-indent: -999em;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
     }
 
     .footer-info {
-        >*:not(:last-child) {
-            margin-bottom: 8px;
+        p {
+            line-height: 1.6;
         }
+    }
 
-        * {
-            color: #fff;
-        }
+    .footer-heading {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
 
-        a {
-            display: inline;
-
-            &:hover {
-                color: var(--success);
-            }
-        }
-
-        strong,
-        b {
-            font-weight: 600;
-        }
+    .footer-office {
+        padding: 16px 0;
+        margin-top: 16px;
+        border-top: 1px solid rgba(#fff, .2);
     }
 }

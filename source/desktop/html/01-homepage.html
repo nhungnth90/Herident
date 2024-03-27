@@ -21,9 +21,20 @@
         @@include('../component/box-style/abf-homepage/abf-homepage.html')
         @@include('../component/box-style/zone-intro/zone-intro.html')
         @@include('../component/box-style/zone-service/zone-service.html')
+        @@include('../component/box-style/zone-expert/zone-expert.html')
+        <div class="booking-banner">
+            <div class="container">
+                <a href="#" class="btn btn-info">Đặt lịch khám</a>
+                <div class="hotline">0916.531.669</div>
+            </div>
+        </div>
+        <div class="container">
+            @@include('../component/box-style/zone-primary/zone-primary.html')
+            @@include('../component/box-style/zone-secondary/zone-secondary.html')
+        </div>
     </div>  <!-- end .site-body -->
 
-    <!-- @@include('../component/footer/footer.html') -->
+    @@include('../component/footer/footer.html')
 
     <!-- JS -->
     <script src="../js/jquery-3.1.1.js"></script>
@@ -47,12 +58,31 @@
 
         // service
         var swiper = new Swiper("#service_swiper", {
-            slidesPerView: 5.4,
-            // centeredSlides: true,
+            slidesPerView: "auto",
             spaceBetween: 3,
-            // loop: true,
-            grabCursor: true,
+            loop: true,
             a11y: false,
+        });
+
+        // expert
+        var swiper = new Swiper("#expert_swiper", {
+            effect: "coverflow",
+            slidesPerView: "auto",
+            loop: true,
+            centeredSlides: true,
+            a11y: false,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 72,
+                depth: 0,
+                modifier: 1,
+                scale: 1,
+                slideShadows: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
     </script>
 </body>

@@ -11,6 +11,10 @@
     color: var(--gray-600);
 }
 
+.box-heading {
+    @include box-heading;
+}
+
 // Form
 .form-group {
     .form-label {
@@ -63,6 +67,19 @@
     }
 }
 
+.btn-info {
+    font-size: 16px;
+    color: #fff !important;
+    text-transform: uppercase;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--info);
+    border-radius: 30px;
+}
+
 // Swiper
 .swiper .swiper-pagination {
     .swiper-pagination-bullet {
@@ -78,5 +95,114 @@
             background: #fff;
             border-radius: 20px;
         }
+    }
+}
+
+// Booking banner
+.booking-banner {
+    height: 300px;
+    background: url("../img/booking-banner.png") center 0 no-repeat;
+    margin-bottom: 100px;
+
+    .container {
+        position: relative;
+        height: inherit;
+    }
+
+    .btn-info {
+        position: absolute;
+        left: 70px;
+        bottom: 30px;
+        animation: jittery 4s infinite;
+
+        &:hover {
+            animation: heartbeat 0.2s infinite;
+        }
+    }
+
+    .hotline {
+        font-size: 24px;
+        color: var(--info);
+        font-weight: 500;
+        position: absolute;
+        left: 420px;
+        bottom: 36px;
+        animation: wiggle 2s linear infinite;
+    }
+}
+
+// Keyframes
+@keyframes jittery {
+
+    5%,
+    50% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(0.9);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    20% {
+        transform: scale(1.15) rotate(-5deg);
+    }
+
+    25% {
+        transform: scale(1.15) rotate(5deg);
+    }
+
+    30% {
+        transform: scale(1.15) rotate(-3deg);
+    }
+
+    35% {
+        transform: scale(1.15) rotate(2deg);
+    }
+
+    40% {
+        transform: scale(1.15) rotate(0);
+    }
+}
+
+@keyframes heartbeat {
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes wiggle {
+
+    0%,
+    7% {
+        transform: rotateZ(0);
+    }
+
+    15% {
+        transform: rotateZ(-15deg);
+    }
+
+    20% {
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    30% {
+        transform: rotateZ(6deg);
+    }
+
+    35% {
+        transform: rotateZ(-4deg);
+    }
+
+    40%,
+    100% {
+        transform: rotateZ(0);
     }
 }

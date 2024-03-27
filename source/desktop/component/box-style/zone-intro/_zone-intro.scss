@@ -15,7 +15,6 @@
    }
 
    .box-heading {
-      @include box-heading;
       margin-bottom: 20px;
 
       &::after {

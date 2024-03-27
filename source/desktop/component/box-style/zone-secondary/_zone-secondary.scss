@@ -1,0 +1,33 @@
+/* ====================================
+   ZONE SECONDARY
+   ==================================== */
+
+.zone--secondary {
+   text-align: center;
+
+   .box-content {
+      text-align: left;
+      display: grid;
+      gap: var(--column-gap);
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .story {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 0 20px;
+      padding-right: 20px;
+      background: var(--gray-100);
+      border-radius: 6px;
+      overflow: hidden;
+
+      &__thumb {
+         height: 180px;
+         grid-row: 1/5;
+      }
+
+      &__heading {
+         padding: 20px 0 6px;
+      }
+   }
+}
