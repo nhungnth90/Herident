@@ -8,18 +8,24 @@
     z-index: 2;
     display: flex;
     align-items: center;
+    background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .06);
-    // &.is-sticky {
-    //     .site-header__nav {
-    //         background: url("../img/header-bg.png") center 0 no-repeat;
-    //         background-size: cover;
-    //         z-index: 99;
-    //         width: 100%;
-    //         position: fixed;
-    //         top: 0;
-    //         left: 0;
-    //     }
-    // }
+    transition: all .2s ease-in-out;
+
+    &.is-sticky {
+        z-index: 99;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: 0 3px 5px rgba(0,0,0,.1);
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            background: url("../img/logo-sm.png") 0 center no-repeat;
+        }
+    }
 
     .logo {
         width: 174px;

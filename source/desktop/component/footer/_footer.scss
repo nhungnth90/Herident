@@ -3,7 +3,7 @@
    ==================================== */
 
 .site-footer {
-    padding: 40px 0;
+    padding: 40px 0 20px;
     background: #003B61;
 
     * {
@@ -17,8 +17,17 @@
     }
 
     .footer-info {
+        >*:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
         p {
             line-height: 1.6;
+            display: flex;
+        }
+
+        .footer-heading {
+            margin-bottom: 10px;
         }
     }
 
@@ -27,12 +36,124 @@
         color: #fff;
         font-weight: 500;
         text-transform: uppercase;
-        margin-bottom: 10px;
     }
 
     .footer-office {
-        padding: 16px 0;
-        margin-top: 16px;
-        border-top: 1px solid rgba(#fff, .2);
+        &:not(:last-child) {
+            padding-top: 16px;
+            border-top: 1px solid rgba(#fff, .2);
+        }
+
+        >*:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        label {
+            color: var(--info);
+        }
+
+        i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    .footer-service {
+        .footer-heading {
+            margin-bottom: 16px;
+        }
+
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            a {
+                padding: 7px 16px;
+                background: rgba(255, 255, 255, .03);
+                border: 1px solid rgba(255, 255, 255, .3);
+                border-radius: 30px;
+
+                &:hover {
+                    color: #fff;
+                    background: var(--secondary);
+                }
+            }
+        }
+    }
+
+    .booking-form {
+        .d-flex {
+            gap: 10px;
+        }
+
+        .form-control,
+        select,
+        textarea {
+            background-color: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .3);
+
+            &::placeholder {
+                color: rgba(255, 255, 255, .8);
+            }
+        }
+
+        select {
+            filter: brightness(0) invert(1);
+
+            option {
+                color: var(--gray-800);
+            }
+        }
+
+        input[type="date"],
+        input[type="time"] {
+            &::before {
+                color: #fff;
+            }
+        }
+
+        .btn {
+            font-size: 14px;
+            width: 150px;
+            height: 48px;
+            margin: auto;
+        }
+    }
+
+    .copyright {
+        font-size: 12px;
+        grid-column: 1/4;
+        display: flex;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, .2);
+
+        * {
+            color: rgba(255, 255, 255, .6);
+        }
+
+        .social {
+            display: flex;
+            gap: 16px;
+            margin-left: auto;
+
+            a {
+                font-size: 16px;
+                display: flex;
+
+                &:hover i {
+                    color: #fff;
+                    transition: all .2s ease-in-out;
+                }
+            }
+
+            .ic-zalo-sm {
+                opacity: .6;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

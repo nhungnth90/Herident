@@ -38,14 +38,6 @@
     content: "\e901";
 }
 
-.ic-chervon-left:before {
-    content: "\e902";
-}
-
-.ic-chervon-right:before {
-    content: "\e90c";
-}
-
 .ic-clock:before {
     content: "\e904";
 }
@@ -70,19 +62,10 @@
     content: "\e909";
 }
 
-.ic-tiktok:before {
-    content: "\e90a";
-}
-
-.ic-youtube:before {
-    content: "\e90b";
-}
-
-
 //
-.ic-zalo {
-    width: 24px;
-    height: 24px;
+.ic-zalo-sm {
+    width: 16px;
+    height: 16px;
     display: block;
-    background: url("../img/ic-zalo.svg") 0 0/24px no-repeat;
+    background: url("../img/ic-zalo-sm.png") 0 0 no-repeat;
 }

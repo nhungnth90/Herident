@@ -9,7 +9,7 @@ $('.site-header>.ic-search').on('click', function () {
     $(this).css("display", "none");
 })
 
-/*--- Sticky Nav ---*/
+/*--- Sticky header ---*/
 if ($('.site-header').length > 0) {
     var normalNavTop = $('.site-header').offset().top;
     var normalNavBottom = $('.site-header').offset().top + $('.site-header').outerHeight();
@@ -24,3 +24,18 @@ if ($('.site-header').length > 0) {
         }
     });
 }
+
+/*--- Back To Top ---*/
+var btn = $(".back-to-top");
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+        btn.addClass("show");
+    } else {
+        btn.removeClass("show");
+    }
+});
+
+btn.on("click", function(e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, 800);
+});
