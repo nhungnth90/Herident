@@ -9,8 +9,10 @@
       margin-bottom: 50px;
 
       .summary {
-         width: 800px;
-         margin: auto;
+         @media (min-width:$lg) {
+            width: 800px;
+            margin: auto;
+         }
       }
    }
 
@@ -30,10 +32,13 @@
    }
 
    .intro-thumb {
-      width: 570px;
-      height: 380px;
       overflow: hidden;
       border-radius: 10px;
+
+      @media (min-width: $xl) {
+         width: 570px;
+         height: 380px;
+      }
 
       img {
          width: 100%;
@@ -43,10 +48,17 @@
 
    .intro-equipment {
       display: grid;
-      grid-template-columns: 270px 270px 1fr;
       gap: 30px;
       padding-bottom: 50px;
       border-bottom: 1px solid $border-color;
+
+      @media (min-width:$md) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width:$xl) {
+         grid-template-columns: 270px 270px 1fr;
+      }
 
       .equipment-sapo {
          .summary {
@@ -90,6 +102,14 @@
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
             overflow: hidden;
+         }
+      }
+
+      .intro-thumb {
+         grid-column: 1/2;
+
+         @media (max-width:$lg) {
+            grid-column: 1/3;
          }
       }
    }

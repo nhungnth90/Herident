@@ -9,15 +9,23 @@
         display: flex;
         align-items: center;
 
-        .main:hover {
+        .main {
+            &:hover {
 
-            .nav-link,
-            .nav-link i {
-                color: var(--primary);
+                .nav-link,
+                .nav-link i {
+                    color: var(--primary);
+                }
+
+                .subnav {
+                    display: block;
+                }
             }
 
-            .subnav {
-                display: block;
+            &:not(.menu) {
+                @media (max-width:1366px) {
+                    display: none;
+                }
             }
         }
 

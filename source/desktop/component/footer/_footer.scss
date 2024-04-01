@@ -12,8 +12,12 @@
 
     .container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
+
+        @media (min-width: $lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 
     .footer-info {
@@ -83,6 +87,10 @@
     }
 
     .booking-form {
+        @media (max-width: $md) {
+            grid-column: 1/4;
+        }
+
         .d-flex {
             gap: 10px;
         }

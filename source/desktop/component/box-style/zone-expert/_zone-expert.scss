@@ -81,6 +81,10 @@
       &-button-prev {
          top: 56%;
 
+         @media (max-width:$lg) {
+            display: none;
+         }
+
          &::after {
             font-size: 30px;
             color: var(--primary);

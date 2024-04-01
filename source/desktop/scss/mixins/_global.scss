@@ -9,7 +9,7 @@
 // Box Heading
 @mixin box-heading {
     font-family: $font-family-heading;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 1.2;
     color: var(--success);
     font-weight: 700;
@@ -17,8 +17,12 @@
     display: inline-block;
     margin-bottom: 50px;
 
+    @media (min-width:$md) {
+        font-size: 36px;
+    }
+
     &::after {
-        content:"";
+        content: "";
         display: block;
         width: 100%;
         height: 5px;

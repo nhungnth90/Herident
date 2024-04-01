@@ -9,10 +9,11 @@
    .box-content {
       text-align: left;
       display: grid;
-      gap: 24px var(--column-gap);
+      gap: 20px;
       grid-template-columns: repeat(2, 1fr);
 
-      @media (min-width: $lg) {
+      @media (min-width: $xl) {
+         gap: 24px 30px;
          grid-template-columns: 1fr 1fr 570px;
       }
    }
@@ -26,8 +27,9 @@
 
       &--focus {
          grid-column: 1/3;
+         grid-row-start: 1;
 
-         @media (min-width: $lg) {
+         @media (min-width: $xl) {
             grid-row: 1/4;
             grid-column: 3/4;
          }

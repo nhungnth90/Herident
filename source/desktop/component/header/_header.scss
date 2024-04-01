@@ -3,7 +3,7 @@
    ==================================== */
 
 .site-header {
-    height: 70px;
+    height: 50px;
     position: relative;
     z-index: 2;
     display: flex;
@@ -12,25 +12,40 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, .06);
     transition: all .2s ease-in-out;
 
+    @media (min-width:$xl) {
+        height: 70px;
+    }
+
     &.is-sticky {
+        height: 50px;
         z-index: 99;
         width: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        box-shadow: 0 3px 5px rgba(0,0,0,.1);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+
+        @media (min-width:$xl) {
+            height: 70px;
+        }
 
         .logo {
-            width: 70px;
-            height: 70px;
-            background: url("../img/logo-sm.png") 0 center no-repeat;
+            width: 58px;
+            height: 50px;
+            background: url("../img/logo-sm.png") 0 center/58px no-repeat;
+
+            @media (min-width:$xl) {
+                width: 70px;
+                height: 70px;
+                background-size: inherit;
+            }
         }
     }
 
     .logo {
-        width: 174px;
-        height: 124px;
-        background: url("../img/logo-default.png") 0 0 no-repeat;
+        width: 58px;
+        height: 50px;
+        background: url("../img/logo-sm.png") 0 center/58px no-repeat;
         display: block;
         text-indent: -999em;
         position: absolute;
@@ -38,13 +53,19 @@
         left: 50%;
         transform: translate(-50%, 0);
         z-index: 2;
+
+        @media (min-width:$xl) {
+            width: 174px;
+            height: 124px;
+            background: url("../img/logo-default.png") 0 0 no-repeat;
+        }
     }
 
     .ic-search {
         font-size: 20px;
         cursor: pointer;
-        width: 40px;
-        height: 40px;
+        width: 70px;
+        height: 70px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -70,6 +91,10 @@
         display: flex;
         margin-left: 20px;
 
+        @media (max-width:1024px) {
+            display: none;
+        }
+
         >*:first-child::after {
             content: "|";
             font-size: 12px;
@@ -93,6 +118,10 @@
         align-items: center;
         justify-content: center;
         gap: 6px;
+
+        @media (max-width:1024px) {
+            display: none;
+        }
 
         i {
             font-size: 20px;

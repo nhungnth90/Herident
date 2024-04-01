@@ -167,8 +167,12 @@ input[type="time"]::before {
 // Booking banner
 .booking-banner {
     height: 300px;
-    background: url("../img/booking-banner.png") center 0 no-repeat;
+    background: url("../img/booking-banner.png") -350px 0 no-repeat;
     margin-bottom: 100px;
+
+    @media (min-width:$xl) {
+        background-position: center 0;
+    }
 
     .container {
         position: relative;
