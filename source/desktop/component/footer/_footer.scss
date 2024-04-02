@@ -3,20 +3,32 @@
    ==================================== */
 
 .site-footer {
-    padding: 40px 0 20px;
+    padding: 30px 20px 20px;
     background: #003B61;
+
+    @media (min-width: $md) {
+        padding: 40px 0 20px;
+    }
 
     * {
         color: rgba(#fff, .8);
     }
 
     .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        @media (min-width: $md) {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         @media (min-width: $lg) {
             grid-template-columns: repeat(3, 1fr);
+        }
+
+        &>*:not(:last-child) {
+            @media (max-width: 767px) {
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -87,12 +99,21 @@
     }
 
     .booking-form {
-        @media (max-width: $md) {
+        @media (min-width: $md) {
             grid-column: 1/4;
         }
 
-        .d-flex {
+        @media (min-width: $lg) {
+            grid-column: inherit;
+        }
+
+        .d-grid {
+            grid-template-columns: repeat(2, 1fr);
             gap: 10px;
+
+            @media (max-width: 767px) {
+                display: block;
+            }
         }
 
         .form-control,
@@ -131,10 +152,13 @@
 
     .copyright {
         font-size: 12px;
-        grid-column: 1/4;
         display: flex;
         padding-top: 20px;
         border-top: 1px solid rgba(255, 255, 255, .2);
+
+        @media (min-width: $md) {
+            grid-column: 1/4;
+        }
 
         * {
             color: rgba(255, 255, 255, .6);

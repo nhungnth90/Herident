@@ -23,6 +23,10 @@
       bottom: -3px;
       z-index: 1;
 
+      @media (max-width:767px) {
+         content: none;
+      }
+
       @media (min-width:$lg) {
          background-position: center bottom;
       }

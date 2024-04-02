@@ -49,22 +49,30 @@
    }
 
    .swiper {
-      height: 510px;
+      @media (min-width:$md) {
+         height: 510px;
+      }
 
       &-wrapper {
          align-items: center;
       }
 
       &-slide-active {
-         width: 510px;
-         height: 510px;
          background: url("../img/expert-bg.svg") 0 0 no-repeat;
          border: 0 none;
 
+         @media (min-width:$md) {
+            width: 510px;
+            height: 510px;
+         }
+
          .avatar {
-            width: 220px;
-            height: 220px;
             border-color: rgba(255, 255, 255, .1);
+
+            @media (min-width:$md) {
+               width: 220px;
+               height: 220px;
+            }
          }
 
          .name {
@@ -74,6 +82,14 @@
 
          .summary {
             color: #fff;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+
+            @media (min-width:$md) {
+               padding: 0 50px;
+            }
          }
       }
 
@@ -81,22 +97,30 @@
       &-button-prev {
          top: 56%;
 
-         @media (max-width:$lg) {
-            display: none;
-         }
-
          &::after {
             font-size: 30px;
-            color: var(--primary);
+            color: #fff;
+
+            @media (min-width:$md) {
+               color: var(--primary);
+            }
          }
       }
 
       &-button-next {
-         right: -60px;
+         right: 12px;
+
+         @media (min-width:$xl) {
+            right: -60px;
+         }
       }
 
       &-button-prev {
-         left: -60px;
+         left: 12px;
+
+         @media (min-width:$xl) {
+            left: -60px;
+         }
       }
    }
 }

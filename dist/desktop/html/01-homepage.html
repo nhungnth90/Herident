@@ -659,7 +659,7 @@
             <option>Phục hình răng</option>
           </select>
         </div>
-        <div class="d-flex">
+        <div class="d-grid">
           <div class="form-group">
             <input type="date" class="form-control" aria-label="Date" />
           </div>
@@ -718,7 +718,7 @@
         // expert
         var swiper = new Swiper("#expert_swiper", {
             effect: "coverflow",
-            slidesPerView: "auto",
+            slidesPerView: 1,
             loop: true,
             centeredSlides: true,
             a11y: false,
@@ -732,6 +732,11 @@
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: "auto",
+                },
             },
         });
     </script>

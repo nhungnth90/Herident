@@ -2,8 +2,8 @@
    STYLES
    ==================================== */
 
-.d-flex {
-    display: flex;
+.d-grid {
+    display: grid;
 }
 
 .wrap-heading {
@@ -26,10 +26,15 @@
     height: 50px;
     background: url("../img/backtotop.png") center 0 no-repeat;
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: 16px;
+    right: 16px;
     cursor: pointer;
     z-index: 1;
+
+    @media (min-width:$xl) {
+        bottom: 50px;
+        right: 50px;
+    }
 
     &.show {
         opacity: 1;
@@ -169,6 +174,10 @@ input[type="time"]::before {
     height: 300px;
     background: url("../img/booking-banner.png") -350px 0 no-repeat;
     margin-bottom: 100px;
+
+    @media (max-width:767px) {
+        display: none;
+    }
 
     @media (min-width:$xl) {
         background-position: center 0;

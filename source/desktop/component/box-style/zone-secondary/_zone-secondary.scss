@@ -9,7 +9,10 @@
       text-align: left;
       display: grid;
       gap: var(--column-gap);
-      grid-template-columns: repeat(2, 1fr);
+
+      @media (min-width:$md) {
+         grid-template-columns: repeat(2, 1fr);
+      }
    }
 
    .story {
@@ -27,11 +30,20 @@
 
       &__thumb {
          height: 180px;
-         grid-row: 1/5;
+
+         @media (min-width:$md) {
+            grid-row: 1/5;
+         }
       }
 
       &__heading {
          padding: 20px 0 6px;
+      }
+   }
+
+   .time {
+      @media (max-width:767px) {
+         display: none;
       }
    }
 }
