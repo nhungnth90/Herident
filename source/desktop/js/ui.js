@@ -5,9 +5,24 @@
 /*--- Toggle ---*/
 // Search
 $('.site-header>.ic-search').on('click', function () {
-    $('.search-form').css("display", "flex").hide().fadeToggle();
-    $(this).css("display", "none");
+    $(this).toggleClass("active");
+    $('.search-form').fadeToggle("fast");
+    $("body").toggleClass("backdrop");
 })
+
+// Menu
+$('.ic-menu').on('click', function () {
+    $(this).toggleClass("active");
+    $('.dropdown-menu').fadeToggle("fast");
+})
+
+// Submenu
+$(".menu-heading .ic-chevron-down").click(function(e) {
+    e.preventDefault();
+    const parent = $(e.target).parent();
+    const subMenu = parent.siblings()[0];
+    $(subMenu).slideToggle("fast");
+});
 
 /*--- Sticky header ---*/
 if ($('.site-header').length > 0) {

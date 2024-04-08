@@ -20,8 +20,14 @@
       margin-bottom: 20px;
 
       &::after {
-         width: 190px;
+         width: 160px;
          margin-left: auto;
+         margin-right: auto;
+
+         @media (min-width:$md) {
+            width: 190px;
+            margin-right: inherit;
+         }
       }
    }
 

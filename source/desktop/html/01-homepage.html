@@ -17,6 +17,11 @@
 <body>
     @@include('../component/header/header.html')
 
+    <div class="pulse">
+        <div class="pulsing"></div>
+        <i class="ic-messenger"></i>
+    </div>
+
     <div class="site-body">
         @@include('../component/box-style/abf-homepage/abf-homepage.html')
         @@include('../component/box-style/zone-intro/zone-intro.html')
@@ -35,6 +40,15 @@
     </div>  <!-- end .site-body -->
 
     @@include('../component/footer/footer.html')
+
+    <div class="social-bar">
+        <a href="#" title="Messenger">
+            <i class="ic-messenger"></i>
+        </a>
+        <a href="#" title="Zalo">
+            <i class="ic-zalo"></i>
+        </a>
+    </div>
     <div class="back-to-top"></div>
 
     <!-- JS -->
@@ -47,9 +61,9 @@
         // highlight
         var swiper = new Swiper('#highlight_swiper', {
             loop: true,
-            // autoplay: {
-            //     delay: 5500,
-            // },
+            autoplay: {
+                delay: 4000,
+            },
             a11y: false,
             pagination: {
                 el: ".swiper-pagination",

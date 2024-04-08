@@ -33,15 +33,65 @@
 
 <body>
   <header class="site-header">
+    <div class="m-menu">
+      <i class="ic-menu"></i>
+      <div class="dropdown-menu">
+        <div class="menu-col">
+          <div class="menu-heading">
+            <a href="02-category.html">Giới thiệu</a>
+            <i class="ic-chevron-down"></i>
+          </div>
+          <div class="submenu">
+            <a href="02-category.html">Chuyên mục 1</a>
+            <a href="02-category.html">Chuyên mục 2</a>
+            <a href="02-category.html">Chuyên mục 3</a>
+          </div>
+        </div>
+        <div class="menu-col">
+          <div class="menu-heading">
+            <a href="02-category.html">Dịch vụ</a>
+            <i class="ic-chevron-down"></i>
+          </div>
+          <div class="submenu">
+            <a href="02-category.html">Chuyên mục 1</a>
+            <a href="02-category.html">Chuyên mục 2</a>
+            <a href="02-category.html">Chuyên mục 3</a>
+          </div>
+        </div>
+        <div class="menu-col">
+          <div class="menu-heading">
+            <a href="02-category.html">Tin tức sự kiện</a>
+            <i class="ic-chevron-down"></i>
+          </div>
+          <div class="submenu">
+            <a href="02-category.html">Chuyên mục 1</a>
+            <a href="02-category.html">Chuyên mục 2</a>
+            <a href="02-category.html">Chuyên mục 3</a>
+          </div>
+        </div>
+        <div class="menu-col">
+          <div class="menu-heading">
+            <a href="02-category.html">Tư liệu</a>
+            <i class="ic-chevron-down"></i>
+          </div>
+          <div class="submenu">
+            <a href="02-category.html">Chuyên mục 1</a>
+            <a href="02-category.html">Chuyên mục 2</a>
+            <a href="02-category.html">Chuyên mục 3</a>
+          </div>
+        </div>
+        <div class="menu-col">
+          <div class="menu-heading">
+            <a href="02-category.html">Liên hệ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <nav class="navigation">
       <ul class="navbar-nav">
-        <li class="main menu">
-          <div class="nav-link">
-            <i class="ic-menu"></i>
-          </div>
-        </li>
         <li class="main">
-          <a href="02-category.html" class="nav-link">Giới thiệu <i class="ic-chervon-down"></i>
+          <a href="02-category.html" class="nav-link">Giới thiệu <i class="ic-chevron-down"></i>
           </a>
           <div class="subnav">
             <a href="02-category.html">Chuyên mục 1</a>
@@ -50,7 +100,7 @@
           </div>
         </li>
         <li class="main">
-          <a href="02-category.html" class="nav-link">Dịch vụ <i class="ic-chervon-down"></i>
+          <a href="02-category.html" class="nav-link">Dịch vụ <i class="ic-chevron-down"></i>
           </a>
           <div class="subnav">
             <a href="02-category.html">Chuyên mục 1</a>
@@ -59,7 +109,7 @@
           </div>
         </li>
         <li class="main">
-          <a href="02-category.html" class="nav-link">Tin tức sự kiện <i class="ic-chervon-down"></i>
+          <a href="02-category.html" class="nav-link">Tin tức sự kiện <i class="ic-chevron-down"></i>
           </a>
           <div class="subnav">
             <a href="02-category.html">Chuyên mục 1</a>
@@ -68,7 +118,7 @@
           </div>
         </li>
         <li class="main">
-          <a href="02-category.html" class="nav-link">Tư liệu <i class="ic-chervon-down"></i>
+          <a href="02-category.html" class="nav-link">Tư liệu <i class="ic-chevron-down"></i>
           </a>
           <div class="subnav">
             <a href="02-category.html">Chuyên mục 1</a>
@@ -102,6 +152,11 @@
       <i class="ic-calendar"></i>Đặt lịch khám
     </a>
   </header> <!-- end site-header -->
+
+  <div class="pulse">
+    <div class="pulsing"></div>
+    <i class="ic-messenger"></i>
+  </div>
 
   <div class="site-body">
     <div id="highlight_swiper" class="abf-homepage swiper">
@@ -685,6 +740,15 @@
       </div>
     </div>
   </footer> <!-- end site-footer -->
+
+  <div class="social-bar">
+    <a href="#" title="Messenger">
+      <i class="ic-messenger"></i>
+    </a>
+    <a href="#" title="Zalo">
+      <i class="ic-zalo"></i>
+    </a>
+  </div>
   <div class="back-to-top"></div>
 
   <!-- JS -->
@@ -697,9 +761,9 @@
         // highlight
         var swiper = new Swiper('#highlight_swiper', {
             loop: true,
-            // autoplay: {
-            //     delay: 5500,
-            // },
+            autoplay: {
+                delay: 4000,
+            },
             a11y: false,
             pagination: {
                 el: ".swiper-pagination",

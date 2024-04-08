@@ -3,11 +3,14 @@
    ==================================== */
 
 .navigation {
-    margin-right: auto;
+    @media (max-width:$xl) {
+        display: none;
+    }
 
     .navbar-nav {
         display: flex;
         align-items: center;
+        padding-left: 20px;
 
         .main {
             &:hover {
@@ -21,33 +24,19 @@
                     display: block;
                 }
             }
-
-            &:not(.menu) {
-                @media (max-width:1366px) {
-                    display: none;
-                }
-            }
-        }
-
-        .menu {
-            width: 70px;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-
-            i {
-                font-size: 24px;
-            }
         }
     }
 
     .nav-link {
         font-size: 16px;
-        height: 70px;
+        height: 50px;
         display: flex;
         align-items: center;
         padding: 0 10px;
+
+        @media (min-width:$lg) {
+            height: 70px;
+        }
 
         i {
             font-size: 20px;
@@ -74,6 +63,99 @@
 
             &:hover {
                 color: var(--info);
+            }
+        }
+    }
+}
+
+// Mobile
+.m-menu {
+    @media (min-width:$lg) {
+        top: 70px;
+    }
+
+    .ic-menu {
+        font-size: 24px;
+        cursor: pointer;
+        width: 60px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width:$lg) {
+            width: 70px;
+            height: 70px;
+        }
+
+        @media (min-width:$xl) {
+            display: none;
+        }
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        padding: 16px 20px;
+        z-index: 1;
+        background: var(--secondary);
+        height: calc(100% - 50px);
+        overflow-y: scroll;
+
+        @media (min-width:$lg) {
+            top: 70px;
+        }
+    }
+
+    .menu-col:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, .15);
+    }
+
+    .menu-heading {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        * {
+            color: #fff;
+        }
+
+        a {
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        i {
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .submenu {
+        display: none;
+        padding: 0 0 12px 12px;
+
+        a {
+            color: #bbb;
+            padding: 6px 0;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                width: 4px;
+                height: 4px;
+                background: #aaa;
+                border-radius: 50%;
+                margin-right: 10px;
             }
         }
     }

@@ -34,12 +34,16 @@
     content: "\e903";
 }
 
-.ic-chervon-down:before {
+.ic-chevron-down:before {
     content: "\e901";
 }
 
 .ic-clock:before {
     content: "\e904";
+}
+
+.ic-close:before {
+    content: "\e902";
 }
 
 .ic-facebook:before {
@@ -62,7 +66,21 @@
     content: "\e909";
 }
 
-//
+// icon with background
+.ic-messenger {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url("../img/ic-messenger.svg") 0 0 no-repeat;
+}
+
+.ic-zalo {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url("../img/ic-zalo.svg") 0 0 no-repeat;
+}
+
 .ic-zalo-sm {
     width: 16px;
     height: 16px;
