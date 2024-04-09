@@ -1,0 +1,38 @@
+/* ====================================
+   TIMELINE
+   ==================================== */
+
+.timeline {
+   .story {
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid $border-color;
+
+      @media (min-width:$md) {
+         padding-bottom: 30px;
+      }
+
+      &__thumb {
+         margin-bottom: 12px;
+         border-radius: 6px;
+
+         @media (min-width:$md) {
+            width: 270px;
+            height: 180px;
+            float: left;
+            margin: 0 30px 0 0;
+         }
+      }
+
+      &__heading {
+         font-size: 22px;
+         line-height: 1.4;
+         font-weight: 500;
+         margin-bottom: 8px;
+      }
+   }
+
+   .btn {
+      margin: auto;
+   }
+}

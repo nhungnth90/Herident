@@ -18,3 +18,14 @@
         padding-right: 20px;
     }
 }
+
+.col {
+    display: grid;
+    gap: 60px;
+
+    &-xl-2 {
+        @media (min-width: $lg) {
+            grid-template-columns: 1fr 330px;
+        }
+    }
+}

@@ -10,11 +10,12 @@
     >table.picture,
     >table.video,
     >figure {
+        text-align: center;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
         width: max-content;
-        max-width: calc(100vw - 17px);
+        max-width: var(--container);
 
         img {
             width: 100%;

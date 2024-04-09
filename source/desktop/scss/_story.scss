@@ -37,9 +37,10 @@
 
     &__summary {
         color: var(--gray-600);
+        display: flex;
 
         * {
-            display: inline;
+            display: contents;
             color: var(--gray-600);
         }
 
@@ -51,18 +52,18 @@
             }
         }
     }
+}
 
-    .time {
-        font-size: 13px;
-        color: var(--gray-600);
-        display: block;
-        margin-bottom: 12px;
+.time {
+    font-size: 13px;
+    color: var(--gray-600);
+    display: block;
+    margin-bottom: 12px;
 
-        i {
-            font-size: 16px;
-            margin-right: 6px;
-            position: relative;
-            top: 2px;
-        }
+    i {
+        font-size: 16px;
+        margin-right: 6px;
+        position: relative;
+        top: 2px;
     }
 }

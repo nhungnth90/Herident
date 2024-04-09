@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bài phát biểu</title>
+    <title>Tin tức sự kiện</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="TongBiThu">
+    <meta name="description" content="Herident">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
@@ -13,21 +13,63 @@
     @@include('../component/box-style/asset/font-preload.html')
     <link rel="stylesheet" href="../styles/css/herident.css">
 </head>
+
 <body>
     @@include('../component/header/header.html')
 
     <div class="site-body">
-        @@include('../component/box-style/search-filter/search-filter.html')
-        <div class="container">
+        @@include('../component/breadcrumb/breadcrumb.html')
+        <div class="container col col-xl-2">
+            @@include('../component/box-style/timeline/timeline.html')
 
+            <div class="cta-booking">
+                <h3 class="label">Nhận tư vấn miễn phí</h3>
+                <div class="booking-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Họ tên">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="Số điện thoại">
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option selected>Lựa chọn dịch vụ</option>
+                            <option>Cấy ghép nha khoa</option>
+                            <option>Niềng răng</option>
+                            <option>Phục hình răng</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" aria-label="Date" />
+                    </div>
+                    <div class="form-group">
+                        <input type="time" value="15:00" class="form-control" aria-label="Time" />
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="3" placeholder="Lời nhắn"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-info">Đặt lịch khám</button>
+                </div>
+            </div>
         </div>
     </div>  <!-- end .site-body -->
 
     @@include('../component/footer/footer.html')
 
+    <div class="social-bar">
+        <a href="#" class="pulse" title="Messenger">
+            <div class="pulsing"></div>
+            <i class="ic-messenger"></i>
+        </a>
+        <a href="#" class="pulse" title="Zalo">
+            <div class="pulsing"></div>
+            <i class="ic-zalo"></i>
+        </a>
+    </div>
+    <div class="back-to-top"></div>
+
     <!-- JS -->
     <script src="../js/jquery-3.1.1.js"></script>
-    <script src="../js/masonry.js"></script>
     <script src="../js/ui.js"></script>
 </body>
 </html>

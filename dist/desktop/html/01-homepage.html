@@ -6,7 +6,7 @@
   <!-- Meta -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="TongBiThu">
+  <meta name="description" content="Herident">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
@@ -19,6 +19,8 @@
   <link rel="preload" href="../styles/fonts/Poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../styles/fonts/Montserrat/Montserrat-Light.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="../styles/fonts/Montserrat/Montserrat-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../styles/fonts/Montserrat/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="../styles/fonts/Montserrat/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../styles/fonts/Montserrat/Montserrat-Medium.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="../styles/fonts/Montserrat/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../styles/fonts/Montserrat/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin>
@@ -31,7 +33,7 @@
   <link rel="stylesheet" href="../styles/css/swiper-bundle.min.css">
 </head>
 
-<body>
+<body class="homepage">
   <header class="site-header">
     <div class="m-menu">
       <i class="ic-menu"></i>
@@ -152,11 +154,6 @@
       <i class="ic-calendar"></i>Đặt lịch khám
     </a>
   </header> <!-- end site-header -->
-
-  <div class="pulse">
-    <div class="pulsing"></div>
-    <i class="ic-messenger"></i>
-  </div>
 
   <div class="site-body">
     <div id="highlight_swiper" class="abf-homepage swiper">
@@ -667,7 +664,7 @@
           và triết lý kinh doanh vì cộng đồng giúp nâng cao sức khỏe, chất lượng cuộc sống và sự hài lòng cho
           khách hàng.</p>
         <div class="footer-office">
-          <label for="">Cơ sở I:</label>
+          <label>Cơ sở I:</label>
           <p>
             <i class="ic-location"></i>308D Trường Chinh, Khương Thượng, Đống Đa, Hà Nội
           </p>
@@ -676,7 +673,7 @@
           </p>
         </div>
         <div class="footer-office">
-          <label for="">Cơ sở II:</label>
+          <label>Cơ sở II:</label>
           <p>
             <i class="ic-location"></i>131 Minh Khai, Minh Khai, Hai Bà Trưng, Hà Nội
           </p>
@@ -699,7 +696,7 @@
           <a href="#">Nha khoa dự phòng</a>
         </div>
       </div>
-      <form class="booking-form">
+      <div class="booking-form">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Họ tên">
         </div>
@@ -726,7 +723,7 @@
           <textarea rows="3" placeholder="Lời nhắn"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Đặt lịch khám</button>
-      </form>
+      </div>
       <div class="copyright">
         <p>Copyright © 2024 Herident. All rights reserved</p>
         <div class="social">
@@ -742,10 +739,12 @@
   </footer> <!-- end site-footer -->
 
   <div class="social-bar">
-    <a href="#" title="Messenger">
+    <a href="#" class="pulse" title="Messenger">
+      <div class="pulsing"></div>
       <i class="ic-messenger"></i>
     </a>
-    <a href="#" title="Zalo">
+    <a href="#" class="pulse" title="Zalo">
+      <div class="pulsing"></div>
       <i class="ic-zalo"></i>
     </a>
   </div>

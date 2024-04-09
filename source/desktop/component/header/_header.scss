@@ -2,6 +2,28 @@
    HEADER   
    ==================================== */
 
+.homepage {
+    .site-header {
+        &.is-sticky {
+            .logo {
+                @media (min-width:$xl) {
+                    width: 70px;
+                    height: 70px;
+                    background: url("../img/logo-sm.png") 0 center no-repeat;
+                }
+            }
+        }
+
+        .logo {
+            @media (min-width:$xl) {
+                width: 174px;
+                height: 124px;
+                background: url("../img/logo-default.png") 0 0 no-repeat;
+            }
+        }
+    }
+}
+
 .site-header {
     height: 50px;
     position: relative;
@@ -28,18 +50,6 @@
         @media (min-width:$lg) {
             height: 70px;
         }
-
-        .logo {
-            width: 58px;
-            height: 50px;
-            background: url("../img/logo-sm.png") 0 center/58px no-repeat;
-
-            @media (min-width:$lg) {
-                width: 70px;
-                height: 70px;
-                background-size: inherit;
-            }
-        }
     }
 
     .logo {
@@ -57,13 +67,7 @@
         @media (min-width:$lg) {
             width: 70px;
             height: 70px;
-            background-size: 70px;
-        }
-
-        @media (min-width:$xl) {
-            width: 174px;
-            height: 124px;
-            background: url("../img/logo-default.png") 0 0 no-repeat;
+            background-size: inherit;
         }
     }
 
@@ -122,7 +126,7 @@
             border: 0 none;
             border-radius: 50px;
 
-            @media (min-width:$lg) {
+            @media (min-width:$xl) {
                 width: 40%;
             }
 
@@ -190,6 +194,10 @@
         height: 70px;
         background: var(--info);
         margin-left: 20px;
+
+        &:hover {
+            background: #FFAB07;
+        }
 
         i {
             position: relative;

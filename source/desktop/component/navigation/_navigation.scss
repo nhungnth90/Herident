@@ -83,6 +83,10 @@
         align-items: center;
         justify-content: center;
 
+        &.active {
+            background: #f8fbff;
+        }
+
         @media (min-width:$lg) {
             width: 70px;
             height: 70px;

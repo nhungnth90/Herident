@@ -32,23 +32,65 @@
 .social-bar {
     position: fixed;
     top: 50%;
-    right: 30px;
+    right: 20px;
     display: grid;
     gap: 12px;
     z-index: 1;
 
-    a {
+    @media (min-width:$lg) {
+        right: 30px;
+    }
+
+    .pulse {
+        position: relative;
         width: 50px;
         height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #E7F1FF;
-        border-radius: 50%;
+
+        * {
+            box-sizing: border-box;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+            }
+        }
+
+        i {
+            position: absolute;
+            z-index: 2;
+            animation: wiggle 2s linear infinite;
+        }
+    }
+
+    .pulsing {
+        width: 99%;
+        height: 99%;
+        border-radius: 50px;
+        z-index: 1;
+        position: relative;
+
+        &:before,
+        &:after {
+            width: 100%;
+            height: 100%;
+            border: inherit;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            background: #E7F1FF;
+            border-radius: inherit;
+            animation: pulsing 1.5s linear infinite;
+        }
+
+        &:after {
+            animation: pulsing1 1.5s linear infinite;
+        }
     }
 }
-
-//
 
 .back-to-top {
     opacity: 0;
@@ -81,13 +123,17 @@
 .form-control,
 select,
 textarea {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--gray-800);
     width: 100%;
     height: 48px;
     padding: 0 20px;
     border: 0 none;
     border-radius: 30px;
+
+    @media (min-width:$lg) {
+        font-size: 14px;
+    }
 
     &::placeholder {
         color: var(--gray-800);
@@ -96,7 +142,7 @@ textarea {
 
 select {
     appearance: none;
-    background: url("../img/ic-select.svg") right 20px center no-repeat;
+    background: url("../img/ic-select.svg") right 20px center no-repeat #fff;
 }
 
 textarea {
@@ -180,6 +226,10 @@ input[type="time"]::before {
     justify-content: center;
     background: var(--info);
     border-radius: 30px;
+
+    &:hover {
+        background: #FFAB07;
+    }
 }
 
 // Swiper
@@ -238,6 +288,36 @@ input[type="time"]::before {
         left: 420px;
         bottom: 36px;
         animation: wiggle 2s linear infinite;
+    }
+}
+
+// CTA Booking
+.cta-booking {
+    padding: 30px 24px;
+    height: fit-content;
+    overflow: hidden;
+    background: url("../img/expert-bg.svg") center 0 no-repeat var(--primary);
+    border-radius: 10px;
+    position: sticky;
+    top: 110px;
+
+    @media (max-width:$md) {
+        display: none;
+    }
+
+    .label {
+        font-family: $font-family-heading;
+        font-size: 20px;
+        line-height: 1.3;
+        color: #fff;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .btn-info {
+        margin: auto;
+        animation: jittery 4s infinite;
     }
 }
 
@@ -317,66 +397,6 @@ input[type="time"]::before {
     }
 }
 
-
-.pulse {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover .pulsing {
-        &:before {
-            animation: pulsing 0.2s linear infinite;
-        }
-
-        &:after {
-            animation: pulsing1 0.2s linear infinite;
-        }
-    }
-
-    * {
-        box-sizing: border-box;
-
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-        }
-    }
-
-    .ic-messenger {
-        position: absolute;
-        z-index: 2;
-    }
-}
-
-.pulsing {
-    width: 99%;
-    height: 99%;
-    border-radius: 50px;
-    z-index: 1;
-    position: relative;
-
-    &:before,
-    &:after {
-        width: 100%;
-        height: 100%;
-        border: inherit;
-        top: 0;
-        left: 0;
-        z-index: 0;
-        background: #E7F1FF;
-        border-radius: inherit;
-        animation: pulsing 2.5s linear infinite;
-    }
-
-    &:after {
-        animation: pulsing1 2.5s linear infinite;
-    }
-}
-
 @keyframes pulsing {
     0% {
         opacity: 1;
@@ -389,12 +409,12 @@ input[type="time"]::before {
 
     70% {
         opacity: 0.2;
-        transform: scaleY(1.8) scaleX(1.4);
+        transform: scaleY(1.4) scaleX(1.4);
     }
 
     80% {
         opacity: 0;
-        transform: scaleY(1.8) scaleX(1.4);
+        transform: scaleY(1.6) scaleX(1.6);
     }
 
     90% {
@@ -415,20 +435,16 @@ input[type="time"]::before {
 
     70% {
         opacity: 0.2;
-        transform: scaleY(1.3) scaleX(1.15);
+        transform: scaleY(1.15) scaleX(1.15);
     }
 
     80% {
         opacity: 0;
-        transform: scaleY(1.3) scaleX(1.15);
+        transform: scaleY(1.3) scaleX(1.3);
     }
 
     90% {
         opacity: 0;
         transform: scaleY(1) scaleX(1);
     }
-}
-
-body {
-    background: green;
 }

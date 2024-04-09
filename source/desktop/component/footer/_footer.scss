@@ -15,20 +15,15 @@
     }
 
     .container {
+        display: grid;
+        gap: 30px;
+
         @media (min-width: $md) {
-            display: grid;
-            gap: 30px;
             grid-template-columns: repeat(2, 1fr);
         }
 
         @media (min-width: $lg) {
             grid-template-columns: repeat(3, 1fr);
-        }
-
-        &>*:not(:last-child) {
-            @media (max-width: 767px) {
-                margin-bottom: 20px;
-            }
         }
     }
 
@@ -99,12 +94,14 @@
     }
 
     .booking-form {
-        @media (min-width: $md) {
-            grid-column: 1/4;
+        @media (max-width: $md) {
+            grid-row: 1;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, .2);
         }
 
-        @media (min-width: $lg) {
-            grid-column: inherit;
+        @media (min-width: $md) and (max-width: 980px) {
+            grid-column: 1/4;
         }
 
         .d-grid {

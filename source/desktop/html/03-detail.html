@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Phát biểu của Tổng Bí Thư Nguyễn Phú Trọng tại Hội nghị Đảng Ủy Công an Trung ương năm 2023</title>
+    <title>Cấy ghép nha khoa</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="TongBiThu">
+    <meta name="description" content="Herident">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
     <link rel="shortcut icon" href="../styles/img/favicon.ico" type="image/x-icon">
     @@include('../component/box-style/asset/font-preload.html')
     <link rel="stylesheet" href="../styles/css/herident.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
 </head>
+
 <body>
     @@include('../component/header/header.html')
 
     <div class="site-body">
-        <div class="container">
-            <div class="article">
-                @@include('../component/breadcrumb/breadcrumb.html')
-                @@include('../component/detail-page/article-header/article-header.html')
-                @@include('../component/detail-page/article-body/article-body.html')
-                <div class="social social-footer">
-                    <div class="fb-likeshare">
-                        <div id="fb-root"></div>
-                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="CQBj6WMl"></script>
-                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
-                    </div>
-                </div>
-                @@include('../component/detail-page/article-body/content-body/_tags.html')
+        <div class="breadcrumb-wrap">
+            <h2 class="headline"><a href="#">Cấy ghép nha khoa</a></h2>
+            <div class="breadcrumb">
+                <h3 class="main">
+                    <a href="01-homepage.html">Trang chủ</a>
+                </h3>
+                <h3 class="main">
+                    <a href="02-category.html">Dịch vụ</a>
+                </h3>
+                <h3 class="main">
+                    <a href="02-category.html">Cấy ghép nha khoa</a>
+                </h3>
             </div>
-            @@include('../component/box-style/related-news/related-news.html')
+        </div>
+        <div class="container article">
+            @@include('../component/detail-page/article-header/article-header.html')
+            @@include('../component/detail-page/article-body/article-body.html')
         </div>
     </div>  <!-- end .site-body -->
 
     @@include('../component/footer/footer.html')
+
+    <div class="social-bar">
+        <a href="#" class="pulse" title="Messenger">
+            <div class="pulsing"></div>
+            <i class="ic-messenger"></i>
+        </a>
+        <a href="#" class="pulse" title="Zalo">
+            <div class="pulsing"></div>
+            <i class="ic-zalo"></i>
+        </a>
+    </div>
+    <div class="back-to-top"></div>
 
     <!-- JS -->
     <script src="../js/jquery-3.1.1.js"></script>
