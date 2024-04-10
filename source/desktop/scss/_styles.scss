@@ -121,7 +121,7 @@
 }
 
 .form-control,
-select,
+.form-select,
 textarea {
     font-size: 16px;
     color: var(--gray-800);
@@ -140,7 +140,7 @@ textarea {
     }
 }
 
-select {
+.form-select {
     appearance: none;
     background: url("../img/ic-select.svg") right 20px center no-repeat #fff;
 }

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../styles/css/herident.css">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
     </style>
 </head>
 
@@ -23,22 +23,57 @@
 
     <div class="site-body">
         <div class="breadcrumb-wrap">
-            <h2 class="headline"><a href="#">Cấy ghép nha khoa</a></h2>
+            <h2 class="headline"><a href="04-service.html">Cấy ghép nha khoa</a></h2>
             <div class="breadcrumb">
                 <h3 class="main">
                     <a href="01-homepage.html">Trang chủ</a>
                 </h3>
                 <h3 class="main">
-                    <a href="02-category.html">Dịch vụ</a>
+                    <a href="04-service.html">Dịch vụ</a>
                 </h3>
                 <h3 class="main">
-                    <a href="02-category.html">Cấy ghép nha khoa</a>
+                    <a href="04-service.html">Cấy ghép nha khoa</a>
                 </h3>
             </div>
         </div>
-        <div class="container article">
-            @@include('../component/detail-page/article-header/article-header.html')
-            @@include('../component/detail-page/article-body/article-body.html')
+        <div class="container">
+            <div class="article">
+                @@include('../component/detail-page/article-header/article-header.html')
+                @@include('../component/detail-page/article-body/article-body.html')
+                <div class="social social-footer">
+                    <div class="fb-likeshare">
+                        <div id="fb-root"></div>
+                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="CQBj6WMl"></script>
+                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+                    </div>
+                    <div class="zl-likeshare">
+                        <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+                        <div class="zalo-share-button" data-href="https://beta.baodauthau.vn/post-90962.html" data-oaid="3160980730889209258" data-layout="1" data-color="blue" data-customize="false"><iframe frameborder="0" allowfullscreen="" scrolling="no" width="70px" height="20px" src="https://sp.zalo.me/plugins/share?dev=null&amp;color=blue&amp;oaid=3160980730889209258&amp;href=https%3A%2F%2Fbeta.baodauthau.vn%2Fpost-90962.html&amp;layout=1&amp;customize=false&amp;callback=null&amp;id=45f7d348-0f04-4b82-bf15-bda9fbb29103&amp;domain=beta.baodauthau.vn&amp;android=false&amp;ios=false"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>  <!-- end .article -->
+
+            <section class="zone zone--secondary">
+                <h3 class="box-heading">Tin liên quan</h3>
+                <div class="box-content">
+                    @@for (var i = 0; i < 6; i++) { 
+                        <article class="story">
+                            <figure class="story__thumb">
+                                <a href="03-detail.html">
+                                    <img src="https://source.unsplash.com/featured/270x180?sig=1" alt="270x180 (3:2)">
+                                </a>
+                            </figure>
+                            <h2 class="story__heading">
+                                <a href="03-detail.html">
+                                    Vì sao người Việt đã bắt đầu quan tâm đến việc chăm sóc răng ê buốt?
+                                </a>
+                            </h2>
+                            <time class="time"><i class="ic-clock"></i>1 tiếng trước</time>
+                        </article>
+                    }
+                </div>
+            </section>
         </div>
     </div>  <!-- end .site-body -->
 

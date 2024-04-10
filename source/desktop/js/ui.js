@@ -17,7 +17,7 @@ $('.ic-menu').on('click', function () {
 })
 
 // Submenu
-$(".menu-heading .ic-chevron-down").click(function(e) {
+$(".menu-heading .ic-chevron-down").click(function (e) {
     e.preventDefault();
     const parent = $(e.target).parent();
     const subMenu = parent.siblings()[0];
@@ -42,7 +42,7 @@ if ($('.site-header').length > 0) {
 
 /*--- Back To Top ---*/
 var btn = $(".back-to-top");
-$(window).scroll(function() {
+$(window).scroll(function () {
     if ($(window).scrollTop() > 300) {
         btn.addClass("show");
     } else {
@@ -50,7 +50,25 @@ $(window).scroll(function() {
     }
 });
 
-btn.on("click", function(e) {
+btn.on("click", function (e) {
     e.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, 800);
 });
+
+
+/*--- Copy Source ---*/
+if ($('.article__source .getlink').length > 0) {
+    $('.article__source .btn').on('click', function () {
+        $('.source-toggle').toggleClass("show");
+    });
+
+    var $temp = $("<input>");
+    var $url = $('.source-toggle a').attr('href');
+    $('.article__source .getlink').on('click', function () {
+        $("body").append($temp);
+        $temp.val($url).select();
+        document.execCommand("copy");
+        $temp.remove();
+        $('.article__source .getlink').html('Đã copy');
+    });
+}

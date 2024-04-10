@@ -28,4 +28,16 @@
             grid-template-columns: 1fr 330px;
         }
     }
+
+    &-2 {
+        gap: 30px;
+
+        @media (min-width: $lg) {
+            gap: 50px;
+        }
+
+        @media (min-width: $xl) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 }

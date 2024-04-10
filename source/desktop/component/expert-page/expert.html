@@ -1,0 +1,47 @@
+<div class="search-filter">
+    <input type="text" class="form-control" placeholder="Họ tên">
+    <select class="form-select">
+        <option selected="">Tất cả phòng ban</option>
+        <option>Hội đồng quản trị</option>
+        <option>Ban giám đốc</option>
+        <option>Ban cố vấn</option>
+    </select>
+    <select class="form-select">
+        <option selected="">Giới tính</option>
+        <option>Nam</option>
+        <option>Nữ</option>
+        <option>Khác</option>
+    </select>
+    <select class="form-select">
+        <option selected="">Tất cả cơ sở</option>
+        <option>Cơ sở I</option>
+        <option>Cơ sở II</option>
+    </select>
+    <button type="submit" class="btn btn-info">Tìm kiếm</button>
+</div>
+<div class="expert-list col col-2">
+    @@for (var i = 0; i < 16; i++) { 
+        <div class="expert-story">
+            <figure class="avatar">
+                <img src="https://source.unsplash.com/featured/480x640?sig=1" alt="480x640 (3:4)">
+            </figure>
+            <div class="summary">PGS - TS</div>
+            <h4 class="name">Đỗ Quang Trung</h4>
+            <ul class="expert-info">
+                <li>
+                    <div class="summary">Nguyên trưởng Bộ môn RHM trường ĐH Y Hà Nội.</div>
+                </li>
+                <li>
+                    <div class="summary">Lorem ipsum dolor sit amet consectetur. Faucibus enim massa dis mauris non.</div>
+                </li>
+                <li>
+                    <div class="summary">Lorem ipsum dolor sit amet consectetur. Faucibus enim massa dis mauris non.</div>
+                </li>
+                <li>
+                    <div class="summary">Lorem ipsum dolor sit amet consectetur. Faucibus enim massa dis mauris non.</div>
+                </li>
+            </ul>
+        </div>
+    }
+    <button type="button" class="btn btn-primary">Xem thêm</button>
+</div>

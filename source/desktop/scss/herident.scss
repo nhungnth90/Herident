@@ -35,11 +35,15 @@
 @import "../component/box-style/zone-secondary/zone-secondary";
 @import "../component/box-style/timeline/timeline";
 
-@import "../component/box-style/search-filter/search-filter";
-@import "../component/box-style/related-news/related-news";
-
 // ----------------------------------
 // INFO : style for detail-page
 // ----------------------------------
 @import "../component/detail-page/article-header/article-header";
 @import "../component/detail-page/article-body/article-body";
+
+// ----------------------------------
+// INFO : style for pages
+// ----------------------------------
+@import "../component/service-page/service";
+@import "../component/expert-page/expert";
+@import "../component/contact-page/contact";

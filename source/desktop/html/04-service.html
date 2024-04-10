@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dịch vụ</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Herident">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="shortcut icon" href="../styles/img/favicon.ico" type="image/x-icon">
+    @@include('../component/box-style/asset/font-preload.html')
+    <link rel="stylesheet" href="../styles/css/herident.css">
+</head>
+
+<body>
+    @@include('../component/header/header.html')
+
+    <div class="site-body">
+        <div class="breadcrumb-wrap">
+            <h2 class="headline"><a href="04-service.html">Dịch vụ</a></h2>
+            <div class="breadcrumb">
+                <h3 class="main">
+                    <a href="01-homepage.html">Trang chủ</a>
+                </h3>
+                <h3 class="main">
+                    <a href="04-service.html">Dịch vụ</a>
+                </h3>
+            </div>
+        </div>
+        <div class="container service">
+            @@include('../component/service-page/service.html')
+        </div>
+    </div>  <!-- end .site-body -->
+
+    @@include('../component/footer/footer.html')
+
+    <div class="social-bar">
+        <a href="#" class="pulse" title="Messenger">
+            <div class="pulsing"></div>
+            <i class="ic-messenger"></i>
+        </a>
+        <a href="#" class="pulse" title="Zalo">
+            <div class="pulsing"></div>
+            <i class="ic-zalo"></i>
+        </a>
+    </div>
+    <div class="back-to-top"></div>
+
+    <!-- JS -->
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/ui.js"></script>
+</body>
+</html>

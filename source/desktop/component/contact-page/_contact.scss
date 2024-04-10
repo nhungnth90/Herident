@@ -1,0 +1,152 @@
+/* ====================================
+   CONTACT
+   ==================================== */
+
+.contact {
+   * {
+      font-size: 16px;
+   }
+
+   .office {
+      >*:not(:last-child) {
+         margin-bottom: 10px;
+      }
+
+      label {
+         font-weight: 500;
+      }
+
+      i {
+         font-size: 20px;
+         color: var(--primary);
+         margin-right: 10px;
+      }
+   }
+
+   &-info {
+      display: grid;
+      gap: 50px;
+      margin-bottom: 50px;
+
+      @media (min-width:$md) {
+         margin-bottom: 100px;
+      }
+
+      @media (min-width:$lg) {
+         grid-template-columns: 1fr 500px;
+         align-items: center;
+         justify-content: space-between;
+      }
+
+      @media (min-width:$xl) {
+         grid-template-columns: 400px 540px;
+      }
+
+      .contact-us {
+         @media (min-width:$md) {
+            padding-left: 60px;
+         }
+      }
+
+      .booking-form {
+         padding: 30px 20px;
+         overflow: hidden;
+         background: url("../img/expert-bg.svg") center 0 no-repeat var(--primary);
+         background-size: cover;
+         border-radius: 20px;
+
+         @media (min-width:$md) {
+            padding: 50px 70px;
+         }
+      }
+
+      .form-group {
+         margin-bottom: 16px;
+      }
+
+      .d-grid {
+         @media (min-width:$xl) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+         }
+      }
+
+      .btn {
+         margin: auto;
+         animation: jittery 4s infinite;
+      }
+   }
+
+   &-us {
+      .office {
+         &:not(:last-child) {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid $border-color;
+         }
+      }
+
+      .social {
+         display: flex;
+         align-items: center;
+         gap: 16px;
+
+         .ic-facebook {
+            font-size: 26px;
+            color: #3B5998;
+         }
+
+         .ic-zalo {
+            background-size: 24px;
+         }
+      }
+   }
+
+   &-label {
+      font-family: $font-family-heading;
+      font-size: 32px;
+      line-height: 1.3;
+      color: var(--secondary);
+      font-weight: 300;
+      margin-bottom: 30px;
+   }
+
+   &-location {
+      padding: 20px;
+      background: #F8FBFF;
+      border-radius: 20px;
+      display: grid;
+      gap: 50px;
+
+      @media (min-width:$md) {
+         padding: 50px;
+      }
+
+      @media (min-width:$lg) {
+         grid-template-columns: 500px 1fr;
+         align-items: center;
+      }
+
+      @media (min-width:$xl) {
+         grid-template-columns: 540px 400px;
+         gap: 80px;
+      }
+
+      .maps {
+         height: 500px;
+         border-radius: 20px;
+         overflow: hidden;
+      }
+
+      .contact-us {
+         @media (max-width:$md) {
+            grid-row: 1;
+         }
+      }
+
+      .form-select {
+         margin-bottom: 20px;
+         border: 1px solid rgba(#0063A4, .1);
+      }
+   }
+}
