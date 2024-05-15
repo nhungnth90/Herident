@@ -168,7 +168,7 @@ $xl : 1200px;
         max-width: calc(100vw - 32px);
 
         @media (min-width: 769px) {
-            max-width: var(--container);
+            max-width: calc(100vw - 17px);
         }
     }
 
